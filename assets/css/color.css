@@ -44,9 +44,7 @@
   color: #f25743;
 }
 
-.main-header.style-one .header-upper .outer-box .logo-box:before{
-	background: -webkit-linear-gradient(-45deg, #f04d45, #eb3648 100%);
-}
+
 
 .main-menu .navigation > li.dropdown.current > a:after,
 .main-menu .navigation > li.dropdown:hover > a:after{
