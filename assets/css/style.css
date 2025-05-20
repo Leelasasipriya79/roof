@@ -1158,7 +1158,7 @@ img {
   z-index: 1;
 }
 
-.main-header .sticky-header .logo-box:before{
+/* .main-header .sticky-header .logo-box:before{
   position: absolute;
   content: '';
   width: 100%;
@@ -1167,7 +1167,7 @@ img {
   top: 0px;
   transform: rotate(45deg);
   z-index: -1;
-}
+} */
 
 .main-header .sticky-header .logo-box:after {
   position: absolute;
