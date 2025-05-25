@@ -562,7 +562,7 @@
                                         <li><a href="#about">Our Company</a></li>
                                         <li><a href="#services">Services</a></li>
                                         <li><a href="#projects">Projects</a></li>
-                                        <li><a href="#contact">Contact</a></li>
+                                        <li><a href="#contact-map">Contact</a>
                                     </ul>
                                 </div>
                             </nav>
@@ -609,7 +609,7 @@
                                         <li><a href="#about">Our Company</a></li>
                                         <li><a href="#services">Services</a></li>
                                         <li><a href="#projects">Projects</a></li>
-                                        <li><a href="#contact">Contact</a></li>
+                                        <li><a href="#contact-map">Contact</a></li>
                                     </ul>
                                 </div>
                             </nav>
@@ -859,7 +859,7 @@
             </section>
             <!-- banner-section end -->
             <!-- service-booking-section -->
-<section class="service-booking-section" style="background: #f8f9fa; padding: 60px 0;">
+            <section class="service-booking-section" style="background: #f8f9fa; padding: 60px 0;">
     <div class="auto-container" style="max-width: 1200px; margin: 0 auto; padding: 0 15px;">
         <div class="inner-box"
             style="background: #fff; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); padding: 40px;">
@@ -872,7 +872,7 @@
             </div>
             <form id="roofingForm" class="service-booking-form">
                 <div class="row" style="display: flex; flex-wrap: wrap; margin: 0 -15px;">
-                    <div class="col-lg-4 col-md-6 col-sm-121" style="padding: 0 15px; margin-bottom: 20px;">
+                    <div class="col-lg-4 col-md-6 col-sm-12" style="padding: 0 15px; margin-bottom: 20px;">
                         <div class="field-input" style="position: relative;">
                             <i class="far fa-user"
                                 style="position: absolute; left: 15px; top: 15px; color: #666;"></i>
@@ -880,15 +880,15 @@
                                 style="width: 100%; padding: 12px 12px 12px 40px; border: 1px solid #ddd; border-radius: 4px;">
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-sm-121" style="padding: 0 15px; margin-bottom: 20px;">
+                    <div class="col-lg-4 col-md-6 col-sm-12" style="padding: 0 15px; margin-bottom: 20px;">
                         <div class="field-input" style="position: relative;">
                             <i class="fas fa-phone"
                                 style="position: absolute; left: 15px; top: 15px; color: #666;"></i>
-                            <input type="text" name="phone" placeholder="Phone Number" required
+                            <input type="tel" name="phone" placeholder="Phone Number" required pattern="\+?[0-9]{10,15}"
                                 style="width: 100%; padding: 12px 12px 12px 40px; border: 1px solid #ddd; border-radius: 4px;">
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-sm-121" style="padding: 0 15px; margin-bottom: 20px;">
+                    <div class="col-lg-4 col-md-6 col-sm-12" style="padding: 0 15px; margin-bottom: 20px;">
                         <div class="field-input" style="position: relative;">
                             <i class="fas fa-map-marker-alt"
                                 style="position: absolute; left: 15px; top: 15px; color: #666;"></i>
@@ -896,17 +896,15 @@
                                 style="width: 100%; padding: 12px 12px 12px 40px; border: 1px solid #ddd; border-radius: 4px;">
                         </div>
                     </div>
-                    
-                    <div class="col-lg-4 col-md-6 col-sm-121" style="padding: 0 15px; margin-bottom: 20px;">
+                    <div class="col-lg-4 col-md-6 col-sm-12" style="padding: 0 15px; margin-bottom: 20px;">
                         <div class="field-input" style="position: relative;">
                             <i class="far fa-calendar-alt"
                                 style="position: absolute; left: 15px; top: 15px; color: #666;"></i>
-                            <input type="date" name="date" placeholder="Inspection Date" required
+                            <input type="date" name="date" required
                                 style="width: 100%; padding: 12px 12px 12px 40px; border: 1px solid #ddd; border-radius: 4px;">
                         </div>
                     </div>
-                    
-                    <div class="col-lg-4 col-md-6 col-sm-121" style="padding: 0 15px; margin-bottom: 20px;">
+                    <div class="col-lg-4 col-md-6 col-sm-12" style="padding: 0 15px; margin-bottom: 20px;">
                         <button type="button" id="whatsappButton"
                             style="background: #25D366; color: white; border: none; padding: 12px 25px; border-radius: 4px; cursor: pointer; font-weight: 600; width: 100%; display: flex; align-items: center; justify-content: center; gap: 8px;">
                             <i class="fab fa-whatsapp" style="font-size: 20px;"></i>
@@ -919,7 +917,7 @@
     </div>
 </section>
 
-<!-- Add Font Awesome for WhatsApp icon -->
+<!-- Font Awesome for icons -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 <script>
@@ -936,25 +934,28 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Collect form data
         const formData = new FormData(form);
-        const name = encodeURIComponent(formData.get('name'));
-        const phone = encodeURIComponent(formData.get('phone'));
-        const address = encodeURIComponent(formData.get('address'));
-        const date = encodeURIComponent(formData.get('date'));
+        const name = encodeURIComponent(formData.get('name').trim());
+        const phone = encodeURIComponent(formData.get('phone').trim());
+        const address = encodeURIComponent(formData.get('address').trim());
+        const date = encodeURIComponent(formData.get('date').trim());
         
         // Format the WhatsApp message
         const message = `*Roofing Inspection Request*%0A%0A` +
-                        `*Name:* ${name}%0A` +
-                        `*Phone:* ${phone}%0A` +
-                        `*Address:* ${address}%0A` +
-                        `*Preferred Date:* ${date}%0A%0A` +
-                        `Hello! I would like to schedule a roofing inspection at the above address on the preferred date. Please confirm availability.`;
+                       `*Name:* ${name}%0A` +
+                       `*Phone:* ${phone}%0A` +
+                       `*Address:* ${address}%0A` +
+                       `*Preferred Date:* ${date}%0A%0A` +
+                       `Hello! I would like to schedule a roofing inspection at the above address on the preferred date. Please confirm availability.`;
         
-        // Open WhatsApp chat with the existing contact (from your first image)
-        window.open(`https://wa.me/918147659246?text=${message}`, '_blank');
+        // WhatsApp number (as provided)
+        const whatsappNumber = '918147659246';
+        
+        // Create and open WhatsApp URL
+        const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${message}`;
+        window.open(whatsappUrl, '_blank');
     });
 });
 </script>
-
             <!-- about-section -->
             <section class="about-section" id="about">
                 <div class="image-layer" style="background-image: url(assets/images/shape/shape-2.png);"></div>
@@ -1718,107 +1719,78 @@ document.addEventListener('DOMContentLoaded', function() {
                 </div>
             </section>
             <!-- project-section end -->
-
-            <section class="working-section centred"
-                style="background-image: url(assets/images/background/working-bg.jpg);">
-                <div class="large-container">
-                    <div class="sec-title light">
-                        <h6><i class="flaticon-roof"></i>How it’s Work</h6>
-                        <h2>Standard <span>Working Process</span></h2>
-                    </div>
-                    <div class="inner-content">
-                        <div class="row clearfix">
-                            <div class="col-lg-3 col-md-6 col-sm-12 working-block" style="width: 300px;">
-                                <div class="working-block-one"
-                                    style="height: 450px; display: flex; flex-direction: column;">
-                                    <div class="inner-box" style="display: flex; flex-direction: column; height: 100%;">
-                                        <div class="icon-box">
-                                            <span class="count-box">01</span>
-                                            <div class="icon"
-                                                style="background-image: url(assets/images/resource/icon-bg.png);"><i
-                                                    class="flaticon-consulting"></i></div>
-                                        </div>
-                                        <div class="lower-content"
-                                            style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
-                                            <h3><a href="index.html">Consultation</a></h3>
-                                            <div class="pattern-layer"
-                                                style="background-image: url(assets/images/icons/line-4.png);"></div>
-                                            <p>Except obtain procure which ever undertake all ever laborious who chooses
-                                                to
-                                                enjoy.</p>
-                                        </div>
-                                    </div>
-                                </div>
+            <section class="working-section centred" style="background-image: url(assets/images/background/working-bg.jpg);">
+    <div class="large-container">
+        <div class="sec-title light">
+            <h6><i class="flaticon-roof"></i>How it’s Work</h6>
+            <h2>Standard <span>Working Process</span></h2>
+        </div>
+        <div class="inner-content">
+            <div class="row clearfix">
+                <div class="col-lg-3 col-md-6 col-sm-12 working-block" style="width: 350px; padding: 0 15px;">
+                    <div class="working-block-one" style="height: 450px; display: flex; flex-direction: column;">
+                        <div class="inner-box" style="display: flex; flex-direction: column; height: 100%;">
+                            <div class="icon-box">
+                                <span class="count-box">01</span>
+                                <div class="icon" style="background-image: url(assets/images/resource/icon-bg.png);"><i class="flaticon-consulting"></i></div>
                             </div>
-                            <div class="col-lg-3 col-md-6 col-sm-12 working-block" style="width: 300px;">
-                                <div class="working-block-one"
-                                    style="height: 450px; display: flex; flex-direction: column;">
-                                    <div class="inner-box" style="display: flex; flex-direction: column; height: 100%;">
-                                        <div class="icon-box">
-                                            <span class="count-box">02</span>
-                                            <div class="icon"
-                                                style="background-image: url(assets/images/resource/icon-bg.png);"><i
-                                                    class="flaticon-paper"></i></div>
-                                        </div>
-                                        <div class="lower-content"
-                                            style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
-                                            <h3><a href="index.html">Detailed Proposal</a></h3>
-                                            <div class="pattern-layer"
-                                                style="background-image: url(assets/images/icons/line-4.png);"></div>
-                                            <p>Take trivial example which of ever undertakes some advantages physical
-                                                exercise.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-6 col-sm-12 working-block" style="width: 300px;">
-                                <div class="working-block-one"
-                                    style="height: 450px; display: flex; flex-direction: column;">
-                                    <div class="inner-box" style="display: flex; flex-direction: column; height: 100%;">
-                                        <div class="icon-box">
-                                            <span class="count-box">03</span>
-                                            <div class="icon"
-                                                style="background-image: url(assets/images/resource/icon-bg.png);"><i
-                                                    class="flaticon-steel"></i></div>
-                                        </div>
-                                        <div class="lower-content"
-                                            style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
-                                            <h3><a href="index.html">Project Installation</a></h3>
-                                            <div class="pattern-layer"
-                                                style="background-image: url(assets/images/icons/line-4.png);"></div>
-                                            <p>Idea pleasure work praisings painy was born account the system obtain
-                                                some
-                                                advantage.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-6 col-sm-12 working-block" style="width: 300px;">
-                                <div class="working-block-one"
-                                    style="height: 450px; display: flex; flex-direction: column;">
-                                    <div class="inner-box" style="display: flex; flex-direction: column; height: 100%;">
-                                        <div class="icon-box">
-                                            <span class="count-box">04</span>
-                                            <div class="icon"
-                                                style="background-image: url(assets/images/resource/icon-bg.png);"><i
-                                                    class="flaticon-parcel"></i></div>
-                                        </div>
-                                        <div class="lower-content"
-                                            style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
-                                            <h3><a href="index.html">Final Inspection</a></h3>
-                                            <div class="pattern-layer"
-                                                style="background-image: url(assets/images/icons/line-4.png);"></div>
-                                            <p>Teachings the great explorer of the truth, the master-builder all human
-                                                happiness.</p>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="lower-content" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+                                <h3><a href="index.html">Consultation</a></h3>
+                                <div class="pattern-layer" style="background-image: url(assets/images/icons/line-4.png);"></div>
+                                <p>Except obtain procure which ever undertake all ever laborious who chooses to enjoy.</p>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
-
+                <div class="col-lg-3 col-md-6 col-sm-12 working-block" style="width: 350px; padding: 0 15px;">
+                    <div class="working-block-one" style="height: 450px; display: flex; flex-direction: column;">
+                        <div class="inner-box" style="display: flex; flex-direction: column; height: 100%;">
+                            <div class="icon-box">
+                                <span class="count-box">02</span>
+                                <div class="icon" style="background-image: url(assets/images/resource/icon-bg.png);"><i class="flaticon-paper"></i></div>
+                            </div>
+                            <div class="lower-content" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+                                <h3><a href="index.html">Detailed Proposal</a></h3>
+                                <div class="pattern-layer" style="background-image: url(assets/images/icons/line-4.png);"></div>
+                                <p>Take trivial example which of ever undertakes some advantages physical exercise.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 working-block" style="width: 350px; padding: 0 15px;">
+                    <div class="working-block-one" style="height: 450px; display: flex; flex-direction: column;">
+                        <div class="inner-box" style="display: flex; flex-direction: column; height: 100%;">
+                            <div class="icon-box">
+                                <span class="count-box">03</span>
+                                <div class="icon" style="background-image: url(assets/images/resource/icon-bg.png);"><i class="flaticon-steel"></i></div>
+                            </div>
+                            <div class="lower-content" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+                                <h3><a href="index.html">Project Installation</a></h3>
+                                <div class="pattern-layer" style="background-image: url(assets/images/icons/line-4.png);"></div>
+                                <p>Idea pleasure work praisings painy was born account the system obtain some advantage.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 working-block" style="width: 350px; padding: 0 15px;">
+                    <div class="working-block-one" style="height: 450px; display: flex; flex-direction: column;">
+                        <div class="inner-box" style="display: flex; flex-direction: column; height: 100%;">
+                            <div class="icon-box">
+                                <span class="count-box">04</span>
+                                <div class="icon" style="background-image: url(assets/images/resource/icon-bg.png);"><i class="flaticon-parcel"></i></div>
+                            </div>
+                            <div class="lower-content" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+                                <h3><a href="index.html">Final Inspection</a></h3>
+                                <div class="pattern-layer" style="background-image: url(assets/images/icons/line-4.png);"></div>
+                                <p>Teachings the great explorer of the truth, the master-builder all human happiness.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 
             <section class="testimonial-section bg-color-2">
@@ -1885,84 +1857,92 @@ document.addEventListener('DOMContentLoaded', function() {
 
             <!-- brochure-section -->
             
-            <!-- brochure-section end -->
+           <!-- brochure-section end -->
 
-            <section class="clients-section centred">
-                <div class="auto-container">
-                    <div class="sec-title">
-                        <h6><i class="flaticon-roof"></i>Our Partners</h6>
-                        <h2>Companies <br /><span>We Have Worked With</span></h2>
-                    </div>
-                    <div class="clients-carousel owl-carousel owl-theme owl-nav-none">
-                        <figure class="clients-logo-box"><a href="#"><img src="assets\images\l1.jpeg"
-                                    alt="Schneider Electric Logo"></a></figure>
-                        <figure class="clients-logo-box"><a href="#"><img src="assets\images\l2.jpeg"
-                                    alt="Kia Logo"></a></figure>
-                        <figure class="clients-logo-box"><a href="#"><img src="assets\images\l9.jpeg"
-                                    alt="Prestige Logo"></a></figure>
-                        <figure class="clients-logo-box"><a href="#"><img src="assets\images\l4.jpeg"
-                                    alt="IBM Logo"></a></figure>
-                    </div>
-                </div>
-            </section>
-            <script>
-                $(document).ready(function () {
-                    // Testimonial Carousel (example, you might already have this)
-                    $('.testimonial-carousel').owlCarousel({
-                        loop: true,
-                        margin: 30,
-                        nav: true,
-                        dots: false,
-                        autoplay: true,
-                        autoplayTimeout: 5000, // 5 seconds
-                        autoplayHoverPause: true,
-                        responsive: {
-                            0: {
-                                items: 1
-                            },
-                            600: {
-                                items: 1
-                            },
-                            1000: {
-                                items: 1
-                            }
-                        }
-                    });
+<section class="clients-section centred">
+    <div class="auto-container">
+        <div class="sec-title">
+            <h6><i class="flaticon-roof"></i>Our Partners</h6>
+            <h2>Companies <br /><span>We Have Worked With</span></h2>
+        </div>
+        <div class="clients-carousel owl-carousel owl-theme owl-nav-none">
+            <figure class="clients-logo-box"><a href="#"><img src="assets\images\l1.jpeg" alt="Schneider Electric Logo"></a></figure>
+            <figure class="clients-logo-box"><a href="#"><img src="assets\images\l2.jpeg" alt="Kia Logo"></a></figure>
+            <figure class="clients-logo-box"><a href="#"><img src="assets\images\l9.jpeg" alt="Prestige Logo"></a></figure>
+            <figure class="clients-logo-box"><a href="#"><img src="assets\images\l4.jpeg" alt="IBM Logo"></a></figure>
+        </div>
+    </div>
+</section>
 
-                    // Clients Carousel - THIS IS THE ONE YOU NEED TO MODIFY
-                    $('.clients-carousel').owlCarousel({
-                        loop: true,
-                        margin: 30, // Adjust margin as needed
-                        nav: false, // As per your HTML
-                        dots: false, // As per your HTML
-                        autoplay: true, // Assuming you have autoplay enabled
-                        autoplayHoverPause: true,
-                        autoplayTimeout: 2000, // Reduced from default, e.g., 2 seconds between slides
-                        smartSpeed: 800, // Speed of the animation itself, e.g., 0.8 seconds
-                        responsive: {
-                            0: {
-                                items: 2 // Example: 2 logos on small screens
-                            },
-                            600: {
-                                items: 3 // Example: 3 logos on medium screens
-                            },
-                            1000: {
-                                items: 4 // Example: 4 logos on large screens, matching your HTML structure
-                            }
-                        }
-                    });
-                });
-            </script>
+<script>
+    $(document).ready(function () {
+        // Clients Carousel - Faster automatic sliding
+        $('.clients-carousel').owlCarousel({
+            loop: true,
+            margin: 30,
+            nav: false,
+            dots: false,
+            autoplay: true,
+            autoplayTimeout: 2000,  // Reduced from 3000 to 2000 (2 seconds between slides)
+            autoplayHoverPause: true,
+            autoplaySpeed: 600,     // Reduced from 1000 to 600 (faster slide transition)
+            smartSpeed: 500,        // Reduced from 800 to 500 (faster animations)
+            responsive: {
+                0: {
+                    items: 2
+                },
+                600: {
+                    items: 3
+                },
+                1000: {
+                    items: 4
+                }
+            }
+        });
+
+        // Testimonial Carousel (kept as reference)
+        $('.testimonial-carousel').owlCarousel({
+            loop: true,
+            margin: 30,
+            nav: true,
+            dots: false,
+            autoplay: true,
+            autoplayTimeout: 5000,
+            autoplayHoverPause: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 1
+                },
+                1000: {
+                    items: 1
+                }
+            }
+        });
+    });
+</script>
 
 
-            <div style="width: 100%; margin: 10px 20px; ">
-                <iframe
-                    src="https://www.google.com/maps?q=MF%20Plaza%20%23325,%2032%20E'%20Cross,%204th%20'T'%20Block,%20Jayanagar,%20Bangalore-560041&output=embed"
-                    width="100%" height="400" style="border:0; width: 100% !important;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-            </div>
-
+         <!-- Add an ID to your maps container -->
+<div id="contact-map" style="width: 100%; margin: 10px 20px;">
+    <iframe
+        src="https://www.google.com/maps?q=MF%20Plaza%20%23325,%2032%20E'%20Cross,%204th%20'T'%20Block,%20Jayanagar,%20Bangalore-560041&output=embed"
+        width="100%" height="400" style="border:0; width: 100% !important;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+</div>
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+</script>
 
             <!-- main-footer -->
             <footer class="main-footer style-one">
@@ -2007,21 +1987,20 @@ document.addEventListener('DOMContentLoaded', function() {
                                         <div class="widget-content clearfix">
                                             <ul class="list clearfix">
                                                 <li><a href="index.html">Home</a></li>
-                                                <li><a href="index.html">About Us</a></li>
+                                                <li><a href="index.html"> Our Company</a></li>
 
                                                 <li><a href="index.html">Services</a></li>
                                                 <li><a href="index.html">Projects</a></li>
-                                                <li><a href="index.html">Team</a></li>
-                                                <li><a href="index.html">Testimonials</a></li>
+                                              
                                             </ul>
                                             <ul class="list clearfix">
-                                                <li><a href="index.html">Brochures</a></li>
+                                                
+                                                <li><a href="index.html">Testimonials</a></li>
+                                                <li><a href="index.html">Our partners</a></li>
                                                 <li><a href="index.html">Contact</a></li>
-                                                <li><a href="index.html">FAQ’s</a></li>
-                                                <li><a href="index.html">Policies</a></li>
-
-                                                <li><a href="index.html">Price List</a></li>
-                                                <li><a href="index.html">Sitemap</a></li>
+                                              
+                                                
+                           <li><a href="index.html">Sitemap</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -2040,16 +2019,14 @@ document.addEventListener('DOMContentLoaded', function() {
                                                                 src="assets/images/resource/post-1.jpg" alt=""></a>
                                                     </figure>
                                                     <h4>Protecting your Roof from Storm Damage</h4>
-                                                    <span class="post-date"><i class="far fa-calendar"></i>March 21,
-                                                        2025</span>
+                                                   
                                                 </div>
                                                 <div class="post">
                                                     <figure class="image-box"><a><img
                                                                 src="assets/images/resource/post-2.jpg" alt=""></a>
                                                     </figure>
                                                     <h4><a>3 Dangers your Roof Might Face this Winter</a></h4>
-                                                    <span class="post-date"><i class="far fa-calendar"></i>March 20,
-                                                        2025</span>
+                                                   
                                                 </div>
                                             </div>
 
@@ -2060,35 +2037,34 @@ document.addEventListener('DOMContentLoaded', function() {
                         </div>
                     </div>
                 </div>
-                <div class="footer-bottom">
-                    <div class="footer-bottom" style="width: 100%;">
-                        <div class="auto-container"
-                            style="width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 15px;">
-                            <div class="inner-box"
-                                style="display: flex; justify-content: space-between; align-items: center; clear: both;">
-                                <div class="copyright" style="float: left;">
-                                    <p style="margin: 0;">Copyright &copy; 2025 All Rights Reserved by <a
-                                            href="index.html" style="color: inherit; text-decoration: none;">Steel Roof
-                                            Structure</a>.</p>
-                                </div>
-                                <ul class="social-links"
-                                    style="float: right; display: flex; gap: 15px; list-style: none; padding: 0; margin: 0;">
-                                    <li><a href="#"
-                                            style="display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; background: #333; color: #fff; border-radius: 50%; text-decoration: none; transition: all 0.3s ease;"><i
-                                                class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="#"
-                                            style="display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; background: #333; color: #fff; border-radius: 50%; text-decoration: none; transition: all 0.3s ease;"><i
-                                                class="fab fa-twitter"></i></a></li>
-                                    <li><a href="#"
-                                            style="display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; background: #333; color: #fff; border-radius: 50%; text-decoration: none; transition: all 0.3s ease;"><i
-                                                class="fab fa-google-plus-g"></i></a></li>
-                                    <li><a href="#"
-                                            style="display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; background: #333; color: #fff; border-radius: 50%; text-decoration: none; transition: all 0.3s ease;"><i
-                                                class="fab fa-youtube"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+               <div class="footer-bottom">
+    <div class="auto-container" style="width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 15px;">
+        <div class="inner-box" style="display: flex; justify-content: space-between; align-items: center; padding: 20px 0;">
+            <div class="copyright" style="margin: 0;">
+                <p style="margin: 0;">Copyright &copy; 2025 All Rights Reserved by <a
+                        href="index.html" style="color: inherit; text-decoration: none;">Steel Roof Structure</a>.</p>
+            </div>
+            <ul class="social-links"
+                style="display: flex; gap: 15px; list-style: none; padding: 0; margin: 0;">
+                <li><a href="#"
+                        style="display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; background: #333; color: #fff; border-radius: 50%; text-decoration: none; transition: all 0.3s ease;"><i
+                            class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"
+                        style="display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; background: #333; color: #fff; border-radius: 50%; text-decoration: none; transition: all 0.3s ease;"><i
+                            class="fab fa-twitter"></i></a></li>
+                <li><a href="#"
+                        style="display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; background: #333; color: #fff; border-radius: 50%; text-decoration: none; transition: all 0.3s ease;"><i
+                            class="fab fa-google-plus-g"></i></a></li>
+                <li><a href="#"
+                        style="display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; background: #333; color: #fff; border-radius: 50%; text-decoration: none; transition: all 0.3s ease;"><i
+                            class="fab fa-youtube"></i></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Include Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
             </footer>
             <!-- main-footer end -->
