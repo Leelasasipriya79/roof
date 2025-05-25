@@ -496,48 +496,7 @@ img {
   -o-transition:all 500ms ease;
 }
 
-.sticky-header{
-  position:fixed;
-  opacity:0;
-  visibility:hidden;
-  background: #fff;
-  left:0px;
-  top:0px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  width:100%;
-  z-index:0;
-  transition:all 500ms ease;
-  -moz-transition:all 500ms ease;
-  -webkit-transition:all 500ms ease;
-  -ms-transition:all 500ms ease;
-  -o-transition:all 500ms ease;
-}
 
-.fixed-header .sticky-header{
-  z-index:999;
-  opacity:1;
-  visibility:visible;
-  -ms-animation-name: fadeInDown;
-  -moz-animation-name: fadeInDown;
-  -op-animation-name: fadeInDown;
-  -webkit-animation-name: fadeInDown;
-  animation-name: fadeInDown;
-  -ms-animation-duration: 500ms;
-  -moz-animation-duration: 500ms;
-  -op-animation-duration: 500ms;
-  -webkit-animation-duration: 500ms;
-  animation-duration: 500ms;
-  -ms-animation-timing-function: linear;
-  -moz-animation-timing-function: linear;
-  -op-animation-timing-function: linear;
-  -webkit-animation-timing-function: linear;
-  animation-timing-function: linear;
-  -ms-animation-iteration-count: 1;
-  -moz-animation-iteration-count: 1;
-  -op-animation-iteration-count: 1;
-  -webkit-animation-iteration-count: 1;
-  animation-iteration-count: 1;
-}
 
 /** header-top **/
 
@@ -1148,17 +1107,61 @@ img {
   margin-bottom: 0px;
 }
 
-.main-header .sticky-header .logo-box{
+.header-upper1{
+  position:fixed;
+  opacity:0;
+  visibility:hidden;
+  background: #fff;
+  left:0px;
+  top:0px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  width:100%;
+  z-index:0;
+  transition:all 500ms ease;
+  -moz-transition:all 500ms ease;
+  -webkit-transition:all 500ms ease;
+  -ms-transition:all 500ms ease;
+  -o-transition:all 500ms ease;
+}
+
+.fixed-header .header-upper1{
+  z-index:999;
+  opacity:1;
+  visibility:visible;
+  -ms-animation-name: fadeInDown;
+  -moz-animation-name: fadeInDown;
+  -op-animation-name: fadeInDown;
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+  -ms-animation-duration: 500ms;
+  -moz-animation-duration: 500ms;
+  -op-animation-duration: 500ms;
+  -webkit-animation-duration: 500ms;
+  animation-duration: 500ms;
+  -ms-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -op-animation-timing-function: linear;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -ms-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -op-animation-iteration-count: 1;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+ 
+}
+
+.main-header .header-upper1 .logo-box{
   position: relative;
   display: inline-block;
   width: 100px;
   height: 100px;
   text-align: center;
-  padding: 20px 0px;
+  padding: 0px 0px;
   z-index: 1;
 }
 
-/* .main-header .sticky-header .logo-box:before{
+.main-header .header-upper1 .logo-box:before{
   position: absolute;
   content: '';
   width: 100%;
@@ -1167,16 +1170,16 @@ img {
   top: 0px;
   transform: rotate(45deg);
   z-index: -1;
-} */
+} 
 
-.main-header .sticky-header .logo-box:after {
+.main-header .header-upper1 .logo-box:after {
   position: absolute;
   content: '';
   border: 1px dashed #fff;
   width: calc(100px - 10px);
   height: calc(100px - 10px);
   left: 5px;
-  top: 5px;
+  top: 0px;
   transform: rotate(45deg);
 }
 
@@ -2228,116 +2231,7 @@ div#mCSB_1_container{
 
 /** booking-section **/
 
-.booking-section{
-  position: relative;
-}
 
-.booking-section .inner-box{
-  position: relative;
-  background: #fff;
-  padding: 42px 50px 30px 50px;
-  margin-top: -100px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-  z-index: 1;
-}
-
-.booking-section .title-inner h2{
-  position: relative;
-  font-size: 36px;
-  line-height: 45px;
-  font-weight: 700;
-  margin-bottom: 3px;
-}
-
-.booking-section .title-inner p{
-  font-size: 18px;
-  line-height: 28px;
-  font-weight: 600;
-  color: #5a5a68;
-}
-
-.booking-section .title-inner p span{
-
-}
-
-.booking-section .upper-box{
-  position: relative;
-  display: block;
-  margin-bottom: 32px;
-}
-
-.booking-section .upper-box .link-box{
-  margin-top: 24px;
-}
-
-.booking-section .upper-box .link-box a{
-  position: relative;
-  display: inline-block;
-  font-size: 18px;
-  line-height: 22px;
-  font-weight: 500;
-}
-
-.booking-section .upper-box .link-box a:hover{
-  color: #5a5a68;
-  border-color: #5a5a68;
-}
-
-.booking-section .upper-box .link-box a i{
-  position: relative;
-  margin-left: 7px;
-  top: 1px;
-}
-
-.booking-form .form-group{
-  position: relative;
-  margin: 0px;
-}
-
-.booking-form .form-group .field-input{
-  position: relative;
-  margin-bottom: 20px;
-}
-
-.booking-form .form-group .field-input i{
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  font-size: 16px;
-  color: #a6a6af;
-  z-index: 1;
-}
-
-.booking-form .form-group .field-input input[type='text']{
-  position: relative;
-  width: 100%;
-  height: 60px;
-  border: 1px solid #e3e3e3;
-  background: #fff;
-  color: #5a5a68;
-  border-radius: 5px;
-  padding: 10px 50px 10px 20px;
-  font-size: 16px;
-  transition: all 500ms ease;
-}
-
-.booking-section .inner-box .booking-form .form-group .field-input input:focus{
-
-}
-
-.booking-form .form-group button{
-  width: 100%;
-  display: block;
-  padding: 14px 50px;
-}
-
-.booking-form .form-group button:hover{
-
-}
-
-.booking-form .form-group button:before{
-  background: #fff;
-}
 
 
 /** about-section **/

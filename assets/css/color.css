@@ -102,7 +102,7 @@
 	color: #f25743;
 }
 
-.main-header .sticky-header .logo-box:before{
+.header-upper.sticky-header .logo-box:before{
 	background: -webkit-linear-gradient(-45deg, #f04d45, #eb3648 100%);
 }
 

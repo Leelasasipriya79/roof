@@ -146,7 +146,7 @@
     float: right;
   }
 
-  .main-header .sticky-header .logo-box{
+  .header-upper .sticky-header .logo-box{
     display: none;
   }
 
@@ -419,7 +419,7 @@
 
   .main-menu,
   .sticky-header,
-  .main-header.style-one .outer-container:before{
+  .header-upper.style-one .outer-container:before{
     display: none !important;
   }
 
