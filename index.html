@@ -137,498 +137,502 @@
         <!-- main header -->
 
 
-
         <style>
-            /* Basic Reset */
-            * {
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-            }
-
-
-            body {
-                font-family: Arial, sans-serif;
-            }
-
-            /* Large Container */
-            .large-container {
-                max-width: 1200px;
-                margin: 0 auto;
-                padding: 0 15px;
-            }
-
-            /* Header Top */
-            .header-top {
-                background: #1a2526;
-                color: white !important;
-                padding: 10px 0;
-            }
-
-            .top-inner {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-            }
-
-            .top-inner p {
-                margin: 0;
-                font-size: 14px;
-            }
-
-            .social-links {
-                list-style: none;
-                display: flex;
-                gap: 10px;
-            }
-
-            .social-links li a {
-                color: #fff;
-                font-size: 14px;
-            }
-
-            .search-btn button {
-                background: none;
-                border: none;
-                color: #fff;
-                font-size: 16px;
-                cursor: pointer;
-            }
-
-            /* Header Upper */
-
-            .header-upper {
-                margin-top: -15px;
-                margin-bottom: -17px;
-                background: #fff;
-                padding: -8px;
-
-            }
-
-            .header-upper1 {
-                margin-top: -15px;
-                margin-bottom: -17px;
-                background: #fff;
-                padding: -8px;
-
-            }
-
-
-            .outer-box {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-            }
-
-            .logo img {
-                max-width: 150px;
-            }
-
-            .menu-area {
-                display: flex;
-                align-items: center;
-            }
-
-            /* Main Menu */
-            .main-menu .navigation {
-                list-style: none;
-                display: flex;
-                gap: 25px;
-            }
-
-            .main-menu .navigation li a {
-                text-decoration: none;
-                color: #333;
-                font-weight: 500;
-                font-size: 16px;
-                text-transform: uppercase;
-            }
-
-            .main-menu .navigation li a:hover {
-                color: #e74c3c;
-            }
-
-            .menu-right-content .info-box {
-                text-align: right;
-            }
-
-            .menu-right-content .box i {
-                color: #e74c3c;
-                margin-right: 5px;
-            }
-
-            .menu-right-content .box h5 a {
-                color: #333;
-                text-decoration: none;
-            }
-
-            .menu-right-content .box span {
-                font-size: 12px;
-                color: #777;
-            }
-
-            /* Sticky Header */
-           
-
-            /* Mobile Nav Toggler */
-            .mobile-nav-toggler {
-                display: none;
-                cursor: pointer;
-            }
-
-            .mobile-nav-toggler .icon-bar {
-                display: block;
-                width: 25px;
-                height: 3px;
-                background: #333;
-                margin: 5px 0;
-            }
-
-            /* Mobile Menu */
-            .mobile-menu {
-                display: none;
-            }
-
-            /* Media Queries for Large Screens */
-            @media (min-width: 992px) {
-
-
-                .menu-area {
-                    position: absolute;
-                    top: 2rem;
-                    left: 29rem;
-                    display: flex;
-
-                    justify-content: flex-end;
-                    align-items: center;
-                    gap: 15px;
-                }
-
-                .main-menu {
-                    margin-left: auto;
-                }
-
-                .main-menu .navbar-collapse {
-                    display: flex !important;
-                    justify-content: flex-end !important;
-                }
-
-                
-            }
-
-            /* Media Queries for Mobile Screens */
-            @media (max-width: 991px) {
-                .main-menu {
-                    display: none;
-                    position: fixed;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100vh;
-                    background: #1a2526;
-                    z-index: 9999;
-                    padding-top: 80px;
-                    transition: all 0.3s ease;
-                }
-
-                .main-menu.show-mobile-menu {
-                    display: block;
-                }
-
-                .main-menu .navigation {
-                    flex-direction: column;
-                    align-items: center;
-                    padding: 20px;
-                }
-
-                .main-menu .navigation li {
-                    margin-bottom: 25px;
-                }
-
-                .main-menu .navigation li a {
-                    color: white !important;
-                    font-size: 18px;
-                }
-
-                .mobile-nav-toggler {
-                    z-index: 10000;
-                    position: relative;
-                }
-
-                .menu-right-content {
-                    display: none;
-                }
-
-
-
-                .menu-area {
-                    justify-content: flex-end;
-                    position: relative;
-                    top: -140px;
-                    /* This is the new line to move it up slightly */
-                    margin-bottom: -120px;
-                }
-
-                .header-top .top-inner {
-                    flex-direction: column;
-                    justify-content: flex-start;
-                    align-items: flex-start;
-                    gap: 10px;
-                }
-
-                .header-top .pull-left,
-                .header-top .pull-right {
-                    float: none !important;
-                    width: 100%;
-                }
-
-                .header-top .pull-left {
-                    width: 100%;
-                    text-align: center;
-                    /* Center the text */
-                    margin-right: auto;
-                }
-
-                .header-top .pull-left p {
-                    color: white !important;
-                    /* Ensure text is white */
-                    margin-right: 30px;
-                    /* Add space between text and icons */
-                    margin: 0 auto;
-                    /* Center the paragraph */
-                    display: inline-block;
-                    /* Keep it inline but centered */
-                }
-
-                .header-top .pull-right {
-                    display: flex;
-                    justify-content: center;
-                    padding-left: 20%;
-                    /* This pushes the icons right while keeping them centered */
-                }
-
-                .header-top .social-links {
-                    justify-content: center;
-                    margin: 0 auto;
-                    transform: translateX(10%);
-                    /* Additional fine-tuning to the right */
-                }
-
-                .mobile-nav-toggler {
-                    display: block;
-                }
-
-                .mobile-menu {
-                    display: block;
-                    position: fixed;
-                    top: 0;
-                    left: -300px;
-                    width: 300px;
-                    height: 100%;
-                    background: #1a2526;
-                    z-index: 9999;
-                    transition: all 0.3s ease;
-                }
-
-                .mobile-menu.active {
-                    left: 0;
-                }
-
-                .menu-backdrop {
-                    position: fixed;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    background: rgba(0, 0, 0, 0.5);
-                    z-index: 9998;
-                    display: none;
-                }
-
-                .menu-backdrop.active {
-                    display: block;
-                }
-
-                .close-btn {
-                    position: absolute;
-                    top: 15px;
-                    right: 15px;
-                    color: #fff;
-                    font-size: 20px;
-                    cursor: pointer;
-                }
-
-                .menu-box {
-                    padding: 20px;
-                    color: #fff;
-                }
-
-                .menu-box .navigation {
-                    list-style: none;
-                    margin: 20px 0;
-                }
-
-                .menu-box .navigation li {
-                    margin-bottom: 15px;
-                }
-
-                .menu-box .navigation li a {
-                    color: #fff;
-                    text-decoration: none;
-                    font-size: 16px;
-                    text-transform: uppercase;
-                }
-
-                .contact-info {
-                    margin-top: 20px;
-                }
-
-                .contact-info h4 {
-                    margin-bottom: 10px;
-                    color: #fff;
-                }
-
-                .contact-info ul {
-                    list-style: none;
-                }
-
-                .contact-info ul li {
-                    margin-bottom: 10px;
-                    font-size: 14px;
-                }
-
-                .contact-info ul li a {
-                    color: #fff;
-                    text-decoration: none;
-                }
-            }
-        </style>
-
+    /* Basic Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+    }
+
+    /* Large Container */
+    .large-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+
+    /* Header Top */
+    .header-top {
+        background: #1a2526;
+        color: white !important;
+        padding: 10px 0;
+    }
+
+    .top-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .top-inner p {
+        margin: 0;
+        font-size: 14px;
+    }
+
+    .social-links {
+        list-style: none;
+        display: flex;
+        gap: 10px;
+    }
+
+    .social-links li a {
+        color: #fff;
+        font-size: 14px;
+    }
+
+    .search-btn button {
+        background: none;
+        border: none;
+        color: #fff;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    /* Header Upper */
+    .header-upper {
+        margin-top: -15px;
+        margin-bottom: -17px;
+        background: #fff;
+        padding: -8px;
+    }
+
+    .header-upper1 {
+        margin-top: -15px;
+        margin-bottom: -17px;
+        background: #fff;
+        padding: -8px;
+    }
+
+    .outer-box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .logo img {
+        max-width: 150px;
+    }
+
+    .menu-area {
+        display: flex;
+        align-items: center;
+    }
+
+    /* Main Menu */
+    .main-menu .navigation {
+        list-style: none;
+        display: flex;
+        gap: 25px;
+    }
+
+    .main-menu .navigation li a {
+        text-decoration: none;
+        color: #333;
+        font-weight: 500;
+        font-size: 16px;
+        text-transform: uppercase;
+    }
+
+    .main-menu .navigation li a:hover {
+        color: #e74c3c;
+    }
+
+    .menu-right-content .info-box {
+        text-align: right;
+    }
+
+    .menu-right-content .box i {
+        color: #e74c3c;
+        margin-right: 5px;
+    }
+
+    .menu-right-content .box h5 a {
+        color: #333;
+        text-decoration: none;
+    }
+
+    .menu-right-content .box span {
+        font-size: 12px;
+        color: #777;
+    }
+
+    /* Mobile Nav Toggler */
+    .mobile-nav-toggler {
+        display: none;
+        cursor: pointer;
+    }
+
+    .mobile-nav-toggler .icon-bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background: #333;
+        margin: 5px 0;
+    }
+
+    /* Mobile Menu */
+    .mobile-menu {
+        display: none;
+    }
+
+    /* Media Queries for Large Screens */
+    @media (min-width: 992px) {
+        .menu-area {
+            position: absolute;
+            top: 2rem;
+            left: 29rem;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .main-menu {
+            margin-left: auto;
+        }
+
+        .main-menu .navbar-collapse {
+            display: flex !important;
+            justify-content: flex-end !important;
+        }
+    }
+
+    /* Media Queries for Mobile Screens */
+    @media (max-width: 991px) {
+        .main-menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: #1a2526;
+            z-index: 9999;
+            padding-top: 80px;
+            transition: all 0.3s ease;
+        }
+
+        .main-menu.show-mobile-menu {
+            display: block;
+        }
+
+        .main-menu .navigation {
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .main-menu .navigation li {
+            margin-bottom: 25px;
+        }
+
+        .main-menu .navigation li a {
+            color: white !important;
+            font-size: 18px;
+        }
+
+        .mobile-nav-toggler {
+            z-index: 10000;
+            position: relative;
+        }
+
+        .menu-right-content {
+            display: none;
+        }
+
+        .menu-area {
+            justify-content: flex-end;
+            position: relative;
+            top: -140px;
+            margin-bottom: -120px;
+        }
+
+        .header-top .top-inner {
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .header-top .pull-left,
+        .header-top .pull-right {
+            float: none !important;
+            width: 100%;
+        }
+
+        .header-top .pull-left {
+            width: 100%;
+            text-align: center;
+            margin-right: auto;
+        }
+
+        .header-top .pull-left p {
+            color: white !important;
+            margin-right: 30px;
+            margin: 0 auto;
+            display: inline-block;
+        }
+
+        .header-top .pull-right {
+            display: flex;
+            justify-content: center;
+            padding-left: 20%;
+        }
+
+        .header-top .social-links {
+            justify-content: center;
+            margin: 0 auto;
+            transform: translateX(10%);
+        }
+
+        .mobile-nav-toggler {
+            display: block;
+        }
+
+        .mobile-menu {
+            display: block;
+            position: fixed;
+            top: 0;
+            left: -300px;
+            width: 300px;
+            height: 100%;
+            background: #1a2526;
+            z-index: 9999;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-menu.active {
+            left: 0;
+        }
+
+        .menu-backdrop {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 9998;
+            display: none;
+        }
+
+        .menu-backdrop.active {
+            display: block;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            color: #fff;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .menu-box {
+            padding: 20px;
+            color: #fff;
+        }
+
+        .menu-box .navigation {
+            list-style: none;
+            margin: 20px 0;
+        }
+
+        .menu-box .navigation li {
+            margin-bottom: 15px;
+        }
+
+        .menu-box .navigation li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            text-transform: uppercase;
+        }
+
+        .contact-info {
+            margin-top: 20px;
+        }
+
+        .contact-info h4 {
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .contact-info ul {
+            list-style: none;
+        }
+
+        .contact-info ul li {
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        .contact-info ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+</style>
         <header class="main-header style-one">
             <!-- Top Header -->
-            <div class="header-top">
-                <div class="large-container">
-                    <div class="top-inner clearfix">
-                        <div class="pull-left" style="float: left;">
-                            <p style="margin: 0; line-height: 1.5; color:white;"><i class="fas fa-home"></i>We Provide
-                                Complete Roofing Services.</p>
-                        </div>
-                        <div class="pull-right clearfix"
-                            style="float: right; display: flex; align-items: center; gap: 15px;">
-                            <ul class="social-links clearfix" style="margin: 0; padding: 0; display: flex; gap: 10px;">
-                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
-                                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-                            </ul>
-                            <div class="search-box-outer">
-                                <div class="search-btn">
-                                    <button type="button" class="search-toggler">
-                                        <i class="fas fa-search"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
 
             <!-- Main Header Section -->
                     <!-- Main Header Section -->
-            <div class="header-upper">
-                <div class="large-container">
-                    <div class="outer-box">
-                        <!-- Logo on the left -->
-                        <div class="logo">
-                            <a href="index.html">
-                                <img src="assets/images/logo.png" alt="Logo" style="width: 150px;" />
-                            </a>
-                        </div>
+       <div class="header-upper">
+    <div class="large-container">
+        <div class="outer-box" style="margin-right: -20px;">
+            <!-- Logo on the left -->
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/images/logo.png" alt="Logo" style="width: 150px;" />
+                </a>
+            </div>
 
-                        <!-- Menu and right content aligned to the right -->
-                        <div class="menu-area">
-                            <!-- Mobile Nav Toggler -->
-                            <div class="mobile-nav-toggler">
-                                <i class="icon-bar"></i>
-                                <i class="icon-bar"></i>
-                                <i class="icon-bar"></i>
-                            </div>
+            <!-- Menu and right content aligned to the right -->
+            <div class="menu-area">
+                <!-- Mobile Nav Toggler -->
+               
 
-                            <!-- Main Menu -->
-                            <nav class="main-menu navbar-expand-md navbar-light">
-                                <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
-                                    <ul class="navigation clearfix">
-                                        <li><a href="#home">Home</a></li>
-                                        <li><a href="#about">Our Company</a></li>
-                                        <li><a href="#services">Services</a></li>
-                                        <li><a href="#projects">Projects</a></li>
-                                        <li><a href="#contact-map">Contact</a>
-                                    </ul>
-                                </div>
-                            </nav>
+                <!-- Main Menu -->
+                <nav class="main-menu navbar-expand-md navbar-light" style="margin-right: -10px; margin-bottom: -30px;">
+                    <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent" style="margin-left:-200px;" >
+                        <ul class="navigation clearfix">
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About Us</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#projects">Projects</a></li>
+                            <li><a href="#roofingForm">Contact</a></li>
+                        </ul>
+                    </div>
+                </nav>
 
-                            <!-- Right Content -->
-                            <div class="menu-right-content clearfix">
-                                <div class="info-box">
-                                    <div class="box">
-                                        <i class="fas fa-clock"></i>
-                                        <h5><a href="tel:8147659246">8147659246</a></h5>
-                                        <span>Mon - Sat: 09am to 07.30pm</span>
-                                    </div>
-                                </div>
+                <!-- Right Content -->
+                <div class="menu-right-content clearfix" style="display: flex; align-items: center; gap: 20px;">
+                    <div class="info-box">
+                        <div class="box" style="display: flex; align-items: center; gap: 10px;">
+                            <i class="fas fa-clock" style="color: #333; font-size: 20px;"></i>
+                            <div>
+                                <h5 style="margin: 0; font-size: 16px;">
+                                    <a href="tel:8147659246" style="color: #333; text-decoration: none;">8147659246</a>
+                                </h5>
+                                <span style="color: #666; font-size: 14px;">Mon - Sat: 09am to 07.30pm</span>
                             </div>
                         </div>
                     </div>
+                    <!-- Social Media Icons -->
+                    <ul class="social-links" style="display: flex; gap: 10px; list-style: none; padding: 0; margin: 0;">
+                        <li>
+                            <a href="https://www.facebook.com/profile.php?id=61576275068210" style="display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; background: #333; color: #fff; border-radius: 50%; text-decoration: none; transition: all 0.3s ease;">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://x.com/roof_steel" style="display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; background: #333; color: #fff; border-radius: 50%; text-decoration: none; transition: all 0.3s ease;">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/channel/UCsHPXNz0xBaDkcrlqG6HFhA/community?show_create_dialog=1" style="display: flex; align-items: center; justify-content823: center; width: 32px; height: 32px; background: #333; color: #fff; border-radius: 50%; text-decoration: none; transition: all 0.3s ease;">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/steelroofstructure/" style="display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; background: #333; color: #fff; border-radius: 50%; text-decoration: none; transition: all 0.3s ease;">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                 <div class="mobile-nav-toggler">
+                    <i class="icon-bar"></i>
+                    <i class="icon-bar"></i>
+                    <i class="icon-bar"></i>
                 </div>
             </div>
+        </div>
+    </div>
+</div>
+      <div class="header-upper1">
+    <div class="large-container">
+        <div class="outer-box" style="margin-right: -20px;">
+            <!-- Logo on the left -->
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/images/logo.png" alt="Logo" style="width: 150px;" />
+                </a>
+            </div>
 
-            <div class="header-upper1">
-                <div class="large-container">
-                    <div class="outer-box">
-                        <!-- Logo on the left -->
-                        <div class="logo">
-                            <a href="index.html">
-                                <img src="assets/images/logo.png" alt="Logo" style="width: 150px;" />
-                            </a>
-                        </div>
+            <!-- Menu and right content aligned to the right -->
+            <div class="menu-area">
+                <!-- Mobile Nav Toggler -->
+               
 
-                        <!-- Menu and right content aligned to the right -->
-                        <div class="menu-area">
-                            <!-- Mobile Nav Toggler -->
-                            <div class="mobile-nav-toggler">
-                                <i class="icon-bar"></i>
-                                <i class="icon-bar"></i>
-                                <i class="icon-bar"></i>
-                            </div>
+                <!-- Main Menu -->
+                <nav class="main-menu navbar-expand-md navbar-light" style="margin-right: -20px;  margin-bottom: -30px">
+                    <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent"  style="margin-left:-200px;">
+                        <ul class="navigation clearfix">
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About Us</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#projects">Projects</a></li>
+                            <li><a href="#roofingForm">Contact</a></li>
+                        </ul>
+                    </div>
+                </nav>
 
-                            <!-- Main Menu -->
-                            <nav class="main-menu navbar-expand-md navbar-light">
-                                <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
-                                    <ul class="navigation clearfix">
-                                        <li><a href="#home">Home</a></li>
-                                        <li><a href="#about">Our Company</a></li>
-                                        <li><a href="#services">Services</a></li>
-                                        <li><a href="#projects">Projects</a></li>
-                                        <li><a href="#contact-map">Contact</a></li>
-                                    </ul>
-                                </div>
-                            </nav>
-
-                            <!-- Right Content -->
-                            <div class="menu-right-content clearfix">
-                                <div class="info-box">
-                                    <div class="box">
-                                        <i class="fas fa-clock"></i>
-                                        <h5><a href="tel:8147659246">8147659246</a></h5>
-                                        <span>Mon - Sat: 09am to 07.30pm</span>
-                                    </div>
-                                </div>
+                <!-- Right Content -->
+                <div class="menu-right-content clearfix" style="display: flex; align-items: center; gap: 20px;">
+                    <div class="info-box">
+                        <div class="box" style="display: flex; align-items: center; gap: 10px;">
+                            <i class="fas fa-clock" style="color: #333; font-size: 20px;"></i>
+                            <div>
+                                <h5 style="margin: 0; font-size: 16px;">
+                                    <a href="tel:8147659246" style="color: #333; text-decoration: none;">8147659246</a>
+                                </h5>
+                                <span style="color: #666; font-size: 14px;">Mon - Sat: 09am to 07.30pm</span>
                             </div>
                         </div>
                     </div>
+                    <!-- Social Media Icons -->
+                    <ul class="social-links" style="display: flex; gap: 10px; list-style: none; padding: 0; margin: 0;">
+                        <li>
+                            <a href="https://www.facebook.com/profile.php?id=61576275068210" style="display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; background: #333; color: #fff; border-radius: 50%; text-decoration: none; transition: all 0.3s ease;">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://x.com/roof_steel" style="display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; background: #333; color: #fff; border-radius: 50%; text-decoration: none; transition: all 0.3s ease;">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/channel/UCsHPXNz0xBaDkcrlqG6HFhA/community?show_create_dialog=1" style="display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; background: #333; color: #fff; border-radius: 50%; text-decoration: none; transition: all 0.3s ease;">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/steelroofstructure/" style="display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; background: #333; color: #fff; border-radius: 50%; text-decoration: none; transition: all 0.3s ease;">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                 <div class="mobile-nav-toggler">
+                    <i class="icon-bar"></i>
+                    <i class="icon-bar"></i>
+                    <i class="icon-bar"></i>
                 </div>
             </div>
-
+        </div>
+    </div>
+</div>
            <script>document.addEventListener('DOMContentLoaded', function () {
             // Select elements for header-upper1
             const toggler = document.querySelector('.header-upper1 .mobile-nav-toggler');
@@ -859,7 +863,7 @@
             </section>
             <!-- banner-section end -->
             <!-- service-booking-section -->
-            <section class="service-booking-section" style="background: #f8f9fa; padding: 60px 0;">
+            <section id="roofingForm" class="service-booking-section" style="background: #f8f9fa; padding: 60px 0;">
     <div class="auto-container" style="max-width: 1200px; margin: 0 auto; padding: 0 15px;">
         <div class="inner-box"
             style="background: #fff; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); padding: 40px;">
@@ -870,7 +874,7 @@
                     <p style="color: #666;"><span style="color: #ff6b6b;">*</span>Your roof will require some professional attention for long live.</p>
                 </div>
             </div>
-            <form id="roofingForm" class="service-booking-form">
+            <form  class="service-booking-form">
                 <div class="row" style="display: flex; flex-wrap: wrap; margin: 0 -15px;">
                     <div class="col-lg-4 col-md-6 col-sm-12" style="padding: 0 15px; margin-bottom: 20px;">
                         <div class="field-input" style="position: relative;">
@@ -957,48 +961,39 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
             <!-- about-section -->
-            <section class="about-section" id="about">
-                <div class="image-layer" style="background-image: url(assets/images/shape/shape-2.png);"></div>
-                <div class="auto-container">
-                    <div class="row clearfix">
-                        <div class="col-lg-6 col-md-12 col-sm-12 image-column">
-                            <div id="image_block_one">
-                                <div class="image-box">
-                                    <div class="pattern-layer"
-                                        style="background-image: url(assets/images/shape/shape-1.png);"></div>
-                                    <figure class="image image-1"><img src="assets/images/resource/about-2.jpg" alt="">
-                                    </figure>
-
-                                    <figure class="image image-3">
-
-                                        <img src="assets/images/resource/about-1.png" alt="" class="rotate-me">
-                                        <i class="flaticon-roof-1"></i>
-                                    </figure>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-12 col-sm-12 content-column">
-                            <div id="content_block_one">
-                                <div class="content-box">
-                                    <div class="sec-title">
-                                        <h6><i class="flaticon-roof"></i>About Company</h6>
-                                        <p>With more than ten years of proven success in quality roofing services, Steel
-                                            Roofing Structure is a family-owned & operated business serving the greater
-                                            Bangalore and all other area state. Our expert team has been dedicated to
-                                            providing the best service and quality available in the area.
-
-                                        </p>
-                                    </div>
-
-
-
-
-                                </div>
-                            </div>
+           <section class="about-section" id="about">
+    <h1 style="color: #333; font-size: 36px; text-align: center; margin-bottom: 30px; margin-top:-80px;">About Us</h1>
+    <div class="image-layer" style="background-image: url(assets/images/shape/shape-2.png);"></div>
+    <div class="auto-container">
+        <div class="row clearfix">
+            <div class="col-lg-6 col-md-12 col-sm-12 image-column">
+                <div id="image_block_one">
+                    <div class="image-box">
+                        <div class="pattern-layer" style="background-image: url(assets/images/shape/shape-1.png);"></div>
+                        <figure class="image image-1"><img src="assets/images/resource/about-2.jpg" alt=""></figure>
+                        <figure class="image image-3">
+                            <img src="assets/images/resource/about-1.png" alt="" class="rotate-me">
+                            <i class="flaticon-roof-1"></i>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12 col-sm-12 content-column">
+                <div id="content_block_one">
+                    <div class="content-box">
+                        <div class="sec-title">
+                            <h6><i class="flaticon-roof"></i>About Company</h6>
+                            <p>With more than ten years of proven success in quality roofing services, Steel
+                                Roofing Structure is a family-owned & operated business serving the greater
+                                Bangalore and all other area state. Our expert team has been dedicated to
+                                providing the best service and quality available in the area.</p>
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
+        </div>
+    </div>
+</section>
             <!-- about-section end -->
 
 
@@ -1793,87 +1788,76 @@ document.addEventListener('DOMContentLoaded', function() {
 </section>
 
 
-            <section class="testimonial-section bg-color-2">
-                <div class="auto-container">
-                    <div class="sec-title centred">
-                        <h6><i class="flaticon-roof"></i>Testimonials</h6>
-                        <h2>Impressive <br /><span>Words from Customers</span></h2>
-                    </div>
-                    <div class="testimonial-inner">
-                        <div class="testimonial-carousel owl-carousel owl-theme owl-nav-none owl-dots-none">
-                            <div class="testimonial-content">
-                                <div class="inner-box">
-
-                                    <ul class="rating-box clearfix">
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                    </ul>
-                                    <p>The new steel roof structure for our industrial unit is outstanding. The team
-                                        completed the installation efficiently and with great precision. Very impressed
-                                        with the strength and finish!</p>
-                                    <h3>Priya Sharma, <span>Bengaluru</span></h3>
-                                </div>
-                            </div>
-                            <div class="testimonial-content">
-                                <div class="inner-box">
-
-                                    <ul class="rating-box clearfix">
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                    </ul>
-                                    <p>We chose a steel roof for its durability, and this company delivered beyond
-                                        expectations. The entire process, from design to final inspection, was smooth.
-                                        Highly recommend their expertise!</p>
-                                    <h3>Amit Singh, <span>Mumbai</span></h3>
-                                </div>
-                            </div>
-                            <div class="testimonial-content">
-                                <div class="inner-box">
-
-                                    <ul class="rating-box clearfix">
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                    </ul>
-                                    <p>Our warehouse now has a robust steel roof. The quality of materials and the
-                                        professionalism of the installation crew were top-notch. The Entire process was
-                                        ccol, It's a structure built to last!</p>
-                                    <h3>Sneha Reddy, <span>Hyderabad</span></h3>
-                                </div>
-                            </div>
-                        </div>
+          <section class="testimonial-section bg-color-2" id="testimonials">
+    <div class="auto-container">
+        <div class="sec-title centred">
+            <h6><i class="flaticon-roof"></i>Testimonials</h6>
+            <h2>Impressive <br /><span>Words from Customers</span></h2>
+        </div>
+        <div class="testimonial-inner">
+            <div class="testimonial-carousel owl-carousel owl-theme owl-nav-none owl-dots-none">
+                <div class="testimonial-content">
+                    <div class="inner-box">
+                        <ul class="rating-box clearfix">
+                            <li><i class="fas fa-star"></i></li>
+                            <li><i class="fas fa-star"></i></li>
+                            <li><i class="fas fa-star"></i></li>
+                            <li><i class="fas fa-star"></i></li>
+                            <li><i class="fas fa-star"></i></li>
+                        </ul>
+                        <p>The new steel roof structure for our industrial unit is outstanding. The team completed the installation efficiently and with great precision. Very impressed with the strength and finish!</p>
+                        <h3>Priya Sharma, <span>Bengaluru</span></h3>
                     </div>
                 </div>
-            </section>
-
+                <div class="testimonial-content">
+                    <div class="inner-box">
+                        <ul class="rating-box clearfix">
+                            <li><i class="fas fa-star"></i></li>
+                            <li><i class="fas fa-star"></i></li>
+                            <li><i class="fas fa-star"></i></li>
+                            <li><i class="fas fa-star"></i></li>
+                            <li><i class="fas fa-star"></i></li>
+                        </ul>
+                        <p>We chose a steel roof for its durability, and this company delivered beyond expectations. The entire process, from design to final inspection, was smooth. Highly recommend their expertise!</p>
+                        <h3>Amit Singh, <span>Mumbai</span></h3>
+                    </div>
+                </div>
+                <div class="testimonial-content">
+                    <div class="inner-box">
+                        <ul class="rating-box clearfix">
+                            <li><i class="fas fa-star"></i></li>
+                            <li><i class="fas fa-star"></i></li>
+                            <li><i class="fas fa-star"></i></li>
+                            <li><i class="fas fa-star"></i></li>
+                            <li><i class="fas fa-star"></i></li>
+                        </ul>
+                        <p>Our warehouse now has a robust steel roof. The quality of materials and the professionalism of the installation crew were top-notch. The Entire process was ccol, It's a structure built to last!</p>
+                        <h3>Sneha Reddy, <span>Hyderabad</span></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
             <!-- brochure-section -->
             
            <!-- brochure-section end -->
 
-<section class="clients-section centred">
+<section class="clients-section centred" id="partners">
     <div class="auto-container">
         <div class="sec-title">
             <h6><i class="flaticon-roof"></i>Our Partners</h6>
             <h2>Companies <br /><span>We Have Worked With</span></h2>
         </div>
         <div class="clients-carousel owl-carousel owl-theme owl-nav-none">
-            <figure class="clients-logo-box"><a href="#"><img src="assets\images\l1.jpeg" alt="Schneider Electric Logo"></a></figure>
-            <figure class="clients-logo-box"><a href="#"><img src="assets\images\l2.jpeg" alt="Kia Logo"></a></figure>
-            <figure class="clients-logo-box"><a href="#"><img src="assets\images\l9.jpeg" alt="Prestige Logo"></a></figure>
-            <figure class="clients-logo-box"><a href="#"><img src="assets\images\l4.jpeg" alt="IBM Logo"></a></figure>
+            <figure class="clients-logo-box"><a href="#"><img src="assets/images/l1.jpeg" alt="Schneider Electric Logo"></a></figure>
+            <figure class="clients-logo-box"><a href="#"><img src="assets/images/l2.jpeg" alt="Kia Logo"></a></figure>
+            <figure class="clients-logo-box"><a href="#"><img src="assets/images/l9.jpeg" alt="Prestige Logo"></a></figure>
+            <figure class="clients-logo-box"><a href="#"><img src="assets/images/l4.jpeg" alt="IBM Logo"></a></figure>
         </div>
     </div>
 </section>
-
 <script>
     $(document).ready(function () {
         // Clients Carousel - Faster automatic sliding
@@ -1945,129 +1929,102 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 </script>
 
             <!-- main-footer -->
-            <footer class="main-footer style-one">
-                <div class="footer-top bg-color-1">
-                    <figure class="image-layer wow slideInLeft animated animated" data-wow-delay="00ms"
-                        data-wow-duration="1500ms"><img src="assets/images/resource/house-2.png" alt=""></figure>
-                    <div class="auto-container">
-                        <div class="widget-section">
-                            <div class="pattern-scale" style="background-image: url(assets/images/shape/shape-7.png);">
+<footer class="main-footer style-one">
+    <div   class="footer-top bg-color-1">
+        <figure class="image-layer wow slideInLeft animated" data-wow-delay="00ms" data-wow-duration="1500ms">
+            <img src="assets/images/resource/house-2.png" alt="">
+        </figure>
+        <div class="auto-container">
+            <div class="widget-section">
+                <div class="pattern-scale" style="background-image: url(assets/images/shape/shape-7.png);"></div>
+                <div class="row clearfix">
+                    <!-- Logo and Description Column -->
+                    <div class="col-lg-4 col-md-6 col-sm-12 footer-column">
+                        <div class="footer-widget logo-widget">
+                            <div class="logo1">
+                                <img src="assets/images/logo.jpg" alt="Logo" style="width: 200px; height: auto; margin-bottom: 20px; margin-top: 20px;" />
                             </div>
-                            <div class="row clearfix">
-                                <div class="col-lg-4 col-md-6 col-sm-12 footer-column">
-                                    <div class="footer-widget logo-widget">
-                                        <div class="logo1">
-                                            <img src="assets/images/logo.jpg" alt="Logo"
-                                                style="width: 1200px !important; height: 200px !important; margin-bottom: 20px; margin-top: 20px;" />
-
-                                        </div>
-                                        <div class="text">
-                                            <p>Steel Roof Structure is a family owned, operated business serving the
-                                                greater
-                                                India area since 2015.</p>
-                                        </div>
-                                        <div class="subscribe-box">
-                                            <h4> </h4>
-                                            <form action="" method="post" class="subscribe-form">
-                                                <div class="form-group">
-                                                    
-                                                   
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6 col-sm-12 footer-column">
-                                    <div class="footer-widget links-widget">
-                                        <div class="widget-title">
-                                            <div class="pattern-layer"
-                                                style="background-image: url(assets/images/shape/shape-8.png);"></div>
-                                            <h3>Useful Links</h3>
-                                        </div>
-                                        <div class="widget-content clearfix">
-                                            <ul class="list clearfix">
-                                                <li><a href="index.html">Home</a></li>
-                                                <li><a href="index.html"> Our Company</a></li>
-
-                                                <li><a href="index.html">Services</a></li>
-                                                <li><a href="index.html">Projects</a></li>
-                                              
-                                            </ul>
-                                            <ul class="list clearfix">
-                                                
-                                                <li><a href="index.html">Testimonials</a></li>
-                                                <li><a href="index.html">Our partners</a></li>
-                                                <li><a href="index.html">Contact</a></li>
-                                              
-                                                
-                           <li><a href="index.html">Sitemap</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6 col-sm-12 footer-column">
-                                    <div class="footer-widget post-widget">
-                                        <div class="widget-title">
-                                            <div class="pattern-layer"
-                                                style="background-image: url(assets/images/shape/shape-8.png);"></div>
-                                            <h3>Popular Post</h3>
-                                        </div>
-                                        <div class="widget-content">
-                                            <div class="post-inner">
-                                                <div class="post">
-                                                    <figure class="image-box"><a><img
-                                                                src="assets/images/resource/post-1.jpg" alt=""></a>
-                                                    </figure>
-                                                    <h4>Protecting your Roof from Storm Damage</h4>
-                                                   
-                                                </div>
-                                                <div class="post">
-                                                    <figure class="image-box"><a><img
-                                                                src="assets/images/resource/post-2.jpg" alt=""></a>
-                                                    </figure>
-                                                    <h4><a>3 Dangers your Roof Might Face this Winter</a></h4>
-                                                   
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
+                            <div class="text" style="color: #cccccc; font-size: 16px; line-height: 1.6; margin-bottom: 20px;">
+                                <p>Steel Roof Structure is a family owned, operated business serving the greater India area since 2015.</p>
+                            </div>
+                            <div class="pq-footer-item text-start" style="display: flex; align-items: center;">
+                                <i class="ti-email" style="color: #ffffff; font-size: 20px; margin-right: 10px;"></i>
+                                <div class="pq-footer-items-info" style="color: #ffffff;">
+                                    <h4 style="color: #ffffff; font-size: 16px; margin: 0;">Email Us</h4>
+                                    <a href="mailto:steelroofstructure@gmail.com" style="color: #cccccc; text-decoration: none;">
+                                        <span style="color: #cccccc;">steelroofstructure@gmail.com</span>
+                                    </a>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <!-- Useful Links Column -->
+                    <div class="col-lg-4 col-md-6 col-sm-12 footer-column">
+                        <div class="footer-widget links-widget">
+                            <div class="widget-title">
+                                <div class="pattern-layer" style="background-image: url(assets/images/shape/shape-8.png);"></div>
+                                <h3 style="color: #ffffff; font-size: 20px; margin-bottom: 20px;">Useful Links</h3>
+                            </div>
+                            <div class="widget-content clearfix" style="display: flex; justify-content: space-between;">
+                                <ul class="list clearfix" style="list-style: none; padding: 0; margin: 0;">
+                                    <li style="margin-bottom: 10px;"><a href="#home" style="color: #cccccc; text-decoration: none;">Home</a></li>
+                                    <li style="margin-bottom: 10px;"><a href="#about" style="color: #cccccc; text-decoration: none;">Our Company</a></li>
+                                    <li style="margin-bottom: 10px;"><a href="#services" style="color: #cccccc; text-decoration: none;">Services</a></li>
+                                    <li style="margin-bottom: 10px;"><a href="#projects" style="color: #cccccc; text-decoration: none;">Projects</a></li>
+                                </ul>
+                                <ul class="list clearfix" style="list-style: none; padding: 0; margin: 0;">
+                                    <li style="margin-bottom: 10px;"><a href="#testimonials" style="color: #cccccc; text-decoration: none;">Testimonials</a></li>
+                                    <li style="margin-bottom: 10px;"><a href="#partners" style="color: #cccccc; text-decoration: none;">Our Partners</a></li>
+                                    <li style="margin-bottom: 10px;"><a href="#roofingForm" style="color: #cccccc; text-decoration: none;">Contact</a></li>
+                                    <li style="margin-bottom: 10px;"><a href="#contact-map" style="color: #cccccc; text-decoration: none;">Sitemap</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Contact Info Column -->
+                    <div class="col-lg-4 col-md-6 col-sm-12 footer-column" style="margin-top:70px;">
+                        <div class="footer-widget contact-widget">
+                            <div class="widget-title">
+                                <div class="pattern-layer" style="background-image: url(assets/images/shape/shape-8.png);"></div>
+                                <h3 style="color: #ffffff; font-size: 20px; margin-bottom: 20px;">Contact Info</h3>
+                            </div>
+                            <div class="widget-content" style="color: #cccccc; font-size: 16px; line-height: 1.6;">
+                                <p style="margin-bottom: 10px;">
+                                    <strong style="color: #ffffff;">Address:  B.O.: MF Plaza #325, 32 'E' Cross, 4th 'T' Block, Jayanagar, Bangalore - 580041.</strong>
+                                </p>
+                                <p style="margin-bottom: 10px;">
+                                    <strong style="color: #ffffff;">Phone: 
+                                    <a href="tel:+91 8147659246" style="color: #cccccc; text-decoration: none;">+91 8147659246</a></strong>
+                                </p>
+                                <p style="margin-bottom: 10px;">
+                                    <strong style="color: #ffffff;">Email: 
+                                    <a href="mailto:steelroofstructure@gmail.com" style="color: #cccccc; text-decoration: none;">steelroofstructure@gmail.com</a></strong>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-               <div class="footer-bottom">
+            </div>
+        </div>
+    </div>
+   <div class="footer-bottom">
     <div class="auto-container" style="width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 15px;">
         <div class="inner-box" style="display: flex; justify-content: space-between; align-items: center; padding: 20px 0;">
             <div class="copyright" style="margin: 0;">
-                <p style="margin: 0;">Copyright &copy; 2025 All Rights Reserved by <a
-                        href="index.html" style="color: inherit; text-decoration: none;">Steel Roof Structure</a>.</p>
+                <p style="margin: 0;">Copyright © 2025 All Rights Reserved by <a href="index.html" style="color: inherit; text-decoration: none;">Steel Roof Structure</a>.</p>
             </div>
-            <ul class="social-links"
-                style="display: flex; gap: 15px; list-style: none; padding: 0; margin: 0;">
-                <li><a href="#"
-                        style="display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; background: #333; color: #fff; border-radius: 50%; text-decoration: none; transition: all 0.3s ease;"><i
-                            class="fab fa-facebook-f"></i></a></li>
-                <li><a href="#"
-                        style="display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; background: #333; color: #fff; border-radius: 50%; text-decoration: none; transition: all 0.3s ease;"><i
-                            class="fab fa-twitter"></i></a></li>
-                <li><a href="#"
-                        style="display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; background: #333; color: #fff; border-radius: 50%; text-decoration: none; transition: all 0.3s ease;"><i
-                            class="fab fa-google-plus-g"></i></a></li>
-                <li><a href="#"
-                        style="display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; background: #333; color: #fff; border-radius: 50%; text-decoration: none; transition: all 0.3s ease;"><i
-                            class="fab fa-youtube"></i></a></li>
+            <ul class="social-links" style="display: flex; gap: 15px; list-style: none; padding: 0; margin: 0;">
+                <li><a href="https://www.facebook.com/profile.php?id=61576275068210" style="display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; background: #333; color: #fff; border-radius: 50%; text-decoration: none; transition: all 0.3s ease;"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="https://x.com/roof_steel" style="display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; background: #333; color: #fff; border-radius: 50%; text-decoration: none; transition: all 0.3s ease;"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="https://www.youtube.com/channel/UCsHPXNz0xBaDkcrlqG6HFhA/community?show_create_dialog=1" style="display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; background: #333; color: #fff; border-radius: 50%; text-decoration: none; transition: all 0.3s ease;"><i class="fab fa-youtube"></i></a></li>
+                <li><a href="https://www.instagram.com/steelroofstructure/" style="display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; background: #333; color: #fff; border-radius: 50%; text-decoration: none; transition: all 0.3s ease;"><i class="fab fa-instagram"></i></a></li>
             </ul>
         </div>
     </div>
 </div>
-
+</footer>
 <!-- Include Font Awesome for icons -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
-            </footer>
-            <!-- main-footer end -->
 
   <style>
    
