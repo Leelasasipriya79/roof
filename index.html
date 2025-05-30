@@ -111,8 +111,7 @@
         <!-- main header -->
         <!-- main header -->
         <!-- main header -->
-
-
+            
         <style>
             /* Basic Reset */
             * {
@@ -510,11 +509,11 @@
                             </a>
                         </li>
                         <li>
-                            <a href="https://x.com/roof_steel" 
-                               style="display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; background: #1DA1F2; color: #fff; border-radius: 50%; text-decoration: none; transition: all 0.3s ease;">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                        </li>
+                                <a href="https://x.com/roof_steel" target="_blank"
+                                   style="display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; background: #000000; color: #fff; border-radius: 50%; text-decoration: none; transition: all 0.3s ease;">
+                                    <span style="font-size: 16px; font-weight: bold;">X</span>
+                                </a>
+                            </li>
                         <li>
                             <a href="https://www.youtube.com/channel/UCsHPXNz0xBaDkcrlqG6HFhA/community?show_create_dialog=1" 
                                style="display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; background: #FF0000; color: #fff; border-radius: 50%; text-decoration: none; transition: all 0.3s ease;">
@@ -586,12 +585,12 @@
                                 <i class="fab fa-facebook-f"></i>
                             </a>
                         </li>
-                        <li>
-                            <a href="https://x.com/roof_steel" 
-                               style="display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; background: #1DA1F2; color: #fff; border-radius: 50%; text-decoration: none; transition: all 0.3s ease;">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                        </li>
+                       <li>
+                                <a href="https://x.com/roof_steel" target="_blank"
+                                   style="display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; background: #000000; color: #fff; border-radius: 50%; text-decoration: none; transition: all 0.3s ease;">
+                                    <span style="font-size: 16px; font-weight: bold;">X</span>
+                                </a>
+                            </li>
                         <li>
                             <a href="https://www.youtube.com/channel/UCsHPXNz0xBaDkcrlqG6HFhA/community?show_create_dialog=1" 
                                style="display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; background: #FF0000; color: #fff; border-radius: 50%; text-decoration: none; transition: all 0.3s ease;">
@@ -666,7 +665,6 @@
 
 
 
-
             <!-- Sticky Header 
         <div class="sticky-header">
             <div class="large-container">
@@ -731,38 +729,47 @@
 
             <script>
                 document.addEventListener('DOMContentLoaded', function () {
-                    const mobileToggler = document.querySelector('.mobile-nav-toggler');
-                    const mobileMenu = document.querySelector('.mobile-menu');
-                    const menuBackdrop = document.querySelector('.menu-backdrop');
-                    const closeBtn = document.querySelector('.close-btn');
-                    const mainMenu = document.querySelector('.main-menu');
+    const mobileToggler = document.querySelector('.mobile-nav-toggler');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const menuBackdrop = document.querySelector('.menu-backdrop');
+    const closeBtn = document.querySelector('.close-btn');
+    const mainMenu = document.querySelector('.main-menu');
 
-                    // Toggle mobile menu and backdrop on toggler click
-                    mobileToggler.addEventListener('click', function () {
-                        mobileMenu.classList.add('active');
-                        menuBackdrop.classList.add('active');
-                        // Ensure main-menu is hidden
-                        if (mainMenu) {
-                            mainMenu.classList.remove('show-mobile-menu');
-                        }
-                    });
+    // Toggle mobile menu and backdrop on toggler click
+    mobileToggler.addEventListener('click', function () {
+        mobileMenu.classList.add('active');
+        menuBackdrop.classList.add('active');
+        // Ensure main-menu is hidden
+        if (mainMenu) {
+            mainMenu.classList.remove('show-mobile-menu');
+        }
+    });
 
-                    // Close mobile menu and backdrop on close button click
-                    if (closeBtn) {
-                        closeBtn.addEventListener('click', function () {
-                            mobileMenu.classList.remove('active');
-                            menuBackdrop.classList.remove('active');
-                        });
-                    }
+    // Close mobile menu and backdrop on close button click
+    if (closeBtn) {
+        closeBtn.addEventListener('click', function () {
+            mobileMenu.classList.remove('active');
+            menuBackdrop.classList.remove('active');
+        });
+    }
 
-                    // Close mobile menu and backdrop when clicking outside (on backdrop)
-                    if (menuBackdrop) {
-                        menuBackdrop.addEventListener('click', function () {
-                            mobileMenu.classList.remove('active');
-                            menuBackdrop.classList.remove('active');
-                        });
-                    }
-                });
+    // Close mobile menu and backdrop when clicking outside (on backdrop)
+    if (menuBackdrop) {
+        menuBackdrop.addEventListener('click', function () {
+            mobileMenu.classList.remove('active');
+            menuBackdrop.classList.remove('active');
+        });
+    }
+
+    // Close mobile menu when clicking on navigation links
+    const navLinks = document.querySelectorAll('.menu-outer a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function () {
+            mobileMenu.classList.remove('active');
+            menuBackdrop.classList.remove('active');
+        });
+    });
+});
             </script>
 
 
@@ -844,133 +851,139 @@
                 </div>
             </section>
             <!-- banner-section end -->
-            <!-- service-booking-section -->
+           <!-- service-booking-section -->
             <section id="roofingForm" class="service-booking-section" style="background: #f8f9fa; padding: 60px 0;">
-                <div class="auto-container" style="max-width: 1200px; margin: 0 auto; padding: 0 15px;">
-                    <div class="inner-box"
-                        style="background: #fff; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); padding: 40px;">
-                        <div class="upper-box"
-                            style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
-                            <div class="title-inner">
-                                <h2 style="color: #2a2a2a; font-size: 28px; margin-bottom: 10px;">Book Roofing
-                                    Inspection</h2>
-                                <p style="color: #666;"><span style="color: #ff6b6b;">*</span>Your roof will require
-                                    some professional attention for long live.</p>
-                            </div>
-                        </div>
-                        <link rel="stylesheet"
-                            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-                        <form action="/submit-booking" method="POST" class="service-booking-form">
-    <div class="row" style="display: flex; flex-wrap: wrap; margin: 0 -15px;">
-        
-        <!-- Your Name -->
-        <div class="col-lg-4 col-md-6 col-sm-12" style="padding: 0 15px; margin-bottom: 20px;">
-            <div class="field-input" style="position: relative;">
-                <label for="name" class="sr-only">Your Name</label>
-                <i class="far fa-user" style="position: absolute; left: 15px; top: 15px; color: #666;"></i>
-                <input type="text" id="name" name="name" placeholder="Your Name" required
-                    style="width: 100%; padding: 12px 12px 12px 40px; border: 1px solid #ddd; border-radius: 4px;">
-            </div>
-        </div>
-
-        <!-- Phone -->
-        <div class="col-lg-4 col-md-6 col-sm-12" style="padding: 0 15px; margin-bottom: 20px;">
-            <div class="field-input" style="position: relative;">
-                <label for="phone" class="sr-only">Phone Number</label>
-                <i class="fas fa-phone" style="position: absolute; left: 15px; top: 15px; color: #666;"></i>
-                <input type="tel" id="phone" name="phone" placeholder="Phone Number" required
-                    pattern="\+?[0-9]{10,15}"
-                    title="Enter a valid phone number (10-15 digits, optional +)"
-                    style="width: 100%; padding: 12px 12px 12px 40px; border: 1px solid #ddd; border-radius: 4px;">
-            </div>
-        </div>
-
-        <!-- Address -->
-        <div class="col-lg-4 col-md-6 col-sm-12" style="padding: 0 15px; margin-bottom: 20px;">
-            <div class="field-input" style="position: relative;">
-                <label for="address" class="sr-only">Your Address</label>
-                <i class="fas fa-map-marker-alt" style="position: absolute; left: 15px; top: 15px; color: #666;"></i>
-                <input type="text" id="address" name="address" placeholder="Your Address" required
-                    style="width: 100%; padding: 12px 12px 12px 40px; border: 1px solid #ddd; border-radius: 4px;">
-            </div>
-        </div>
-
-<!-- Select Option -->
-
-
-
-
-
-        <!-- Booking Date -->
-        <div class="col-lg-4 col-md-6 col-sm-12" style="padding: 0 15px; margin-bottom: 20px;">
-            <div class="field-input" style="position: relative;">
-                <label for="date" class="sr-only">Booking Date</label>
-                <i class="far fa-calendar-alt" style="position: absolute; left: 15px; top: 15px; color: #666;"></i>
-                <input type="date" id="date" name="date" required
-                    style="width: 100%; padding: 12px 12px 12px 40px; border: 1px solid #ddd; border-radius: 4px;">
-            </div>
-        </div>
-
-        <!-- WhatsApp Button -->
-        <div class="col-lg-4 col-md-6 col-sm-12" style="padding: 0 15px; margin-bottom: 20px;">
-            <button type="button" id="whatsappButton"
-                style="background: #25D366; color: white; border: none; padding: 12px 25px; border-radius: 4px; cursor: pointer; font-weight: 600; width: 100%; display: flex; align-items: center; justify-content: center; gap: 8px;">
-                <i class="fab fa-whatsapp" style="font-size: 20px;"></i>
-                Contact via WhatsApp
-            </button>
-        </div>
-
-    </div>
-</form>
-<style>
-    select {
-  display: inline-block;
-  overflow: hidden;
-  white-space: nowrap;
-}
-
-</style>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const select = document.getElementById("exampleSelect");
-
-    // Ensure the select behaves like a dropdown
-    select.addEventListener("focus", () => {
-      select.size = 4; // Show 4 options when clicked
-    });
-
-    select.addEventListener("blur", () => {
-      select.size = 1; // Collapse when not focused
-    });
-
-    select.addEventListener("change", () => {
-      select.size = 1; // Collapse after selection
-    });
-  });
-</script>
-
-
-                      
-                        <!-- <script>
-                            document.getElementById('whatsappButton').addEventListener('click', function () {
-                                const name = document.querySelector('input[name="name"]').value;
-                                const phone = document.querySelector('input[name="phone"]').value;
-                                const address = document.querySelector('input[name="address"]').value;
-                                const service = document.querySelector('select[name="service"]').value;
-                                const date = document.querySelector('input[name="date"]').value;
-                                if (name && phone && address && service && date) {
-                                    const message = `Booking Request: Name: ${name}, Phone: ${phone}, Address: ${address}, Service: ${service}, Date: ${date}`;
-                                    const whatsappUrl = `https://wa.me/+1234567890?text=${encodeURIComponent(message)}`;
-                                    window.open(whatsappUrl, '_blank');
-                                } else {
-                                    alert('Please fill out all fields before contacting via WhatsApp.');
-                                }
-                            });
-                        </script> -->
-                    </div>
+    <div class="auto-container" style="max-width: 1200px; margin: 0 auto; padding: 0 15px;">
+        <div class="inner-box"
+            style="background: #fff; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); padding: 40px;">
+            <div class="upper-box"
+                style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
+                <div class="title-inner">
+                    <h2 style="color: #2a2a2a; font-size: 28px; margin-bottom: 10px;">Book Roofing Inspection</h2>
+                    <p style="color: #666;"><span style="color: #ff6b6b;">*</span>Your roof will require some professional attention for long live.</p>
                 </div>
-            </section>
+            </div>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+            <form action="/submit-booking" method="POST" class="service-booking-form">
+                <div class="row" style="display: flex; flex-wrap: wrap; margin: 0 -15px;">
+                    <!-- Your Name -->
+                    <div class="col-lg-4 col-md-6 col-sm-12" style="padding: 0 15px; margin-bottom: 20px;">
+                        <div class="field-input" style="position: relative;">
+                            <label for="name" class="sr-only">Your Name</label>
+                            <i class="far fa-user" style="position: absolute; left: 15px; top: 15px; color: #666;"></i>
+                            <input type="text" id="name" name="name" placeholder="Your Name" required
+                                style="width: 100%; padding: 12px 12px 12px 40px; border: 1px solid #ddd; border-radius: 4px;">
+                        </div>
+                    </div>
 
+                    <!-- Phone -->
+                    <div class="col-lg-4 col-md-6 col-sm-12" style="padding: 0 15px; margin-bottom: 20px;">
+                        <div class="field-input" style="position: relative;">
+                            <label for="phone" class="sr-only">Phone Number</label>
+                            <i class="fas fa-phone" style="position: absolute; left: 15px; top: 15px; color: #666;"></i>
+                            <input type="tel" id="phone" name="phone" placeholder="Phone Number" required
+                                pattern="[0-9]{10}"
+                                title="Enter exactly 10 digits"
+                                style="width: 100%; padding: 12px 12px 12px 40px; border: 1px solid #ddd; border-radius: 4px;">
+                            <i id="phoneAlert" class="fas fa-exclamation-circle" style="position: absolute; right: 15px; top: 15px; color: #ff6b6b; display: none;"></i>
+                        </div>
+                    </div>
+
+                    <!-- Address -->
+                    <div class="col-lg-4 col-md-6 col-sm-12" style="padding: 0 15px; margin-bottom: 20px;">
+                        <div class="field-input" style="position: relative;">
+                            <label for="address" class="sr-only">Your Address</label>
+                            <i class="fas fa-map-marker-alt" style="position: absolute; left: 15px; top: 15px; color: #666;"></i>
+                            <input type="text" id="address" name="address" placeholder="Your Address" required
+                                style="width: 100%; padding: 12px 12px 12px 40px; border: 1px solid #ddd; border-radius: 4px;">
+                        </div>
+                    </div>
+
+                    <!-- Booking Date -->
+                    <div class="col-lg-4 col-md-6 col-sm-12" style="padding: 0 15px; margin-bottom: 20px;">
+                        <div class="field-input" style="position: relative;">
+                            <label for="date" class="sr-only">Booking Date</label>
+                            <i class="far fa-calendar-alt" style="position: absolute; left: 15px; top: 15px; color: #666;"></i>
+                            <input type="date" id="date" name="date" required
+                                min="2025-05-30"
+                                style="width: 100%; padding: 12px 12px 12px 40px; border: 1px solid #ddd; border-radius: 4px;">
+                            <i id="dateAlert" class="fas fa-exclamation-circle" style="position: absolute; right: 15px; top: 15px; color: #ff6b6b; display: none;"></i>
+                        </div>
+                    </div>
+
+                    <!-- WhatsApp Button -->
+                    <div class="col-lg-4 grouped col-md-6 col-sm-12" style="padding: 0 15px; margin-bottom: 20px;">
+                        <button type="button" id="whatsappButton"
+                            style="background: #25D366; color: white; border: none; padding: 12px 25px; border-radius: 4px; cursor: pointer; font-weight: 600; width: 100%; display: flex; align-items: center; justify-content: center; gap: 8px;">
+                            <i class="fab fa-whatsapp" style="font-size: 20px;"></i>
+                            Contact via WhatsApp
+                        </button>
+                    </div>
+
+                </div>
+            </form>
+            <style>
+                select {
+                    display: inline-block;
+                    overflow: hidden;
+                    white-space: nowrap;
+                }
+            </style>
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    const phoneInput = document.getElementById('phone');
+                    const dateInput = document.getElementById('date');
+                    const phoneAlert = document.getElementById('phoneAlert');
+                    const dateAlert = document.getElementById('dateAlert');
+
+                    // Phone number validation (show alert symbol if more than 10 digits)
+                    phoneInput.addEventListener('input', function () {
+                        const phoneValue = phoneInput.value;
+                        if (phoneValue.length > 10) {
+                            phoneAlert.style.display = 'block';
+                        } else {
+                            phoneAlert.style.display = 'none';
+                        }
+                    });
+
+                    // Date year validation (show alert symbol if year is more than 4 digits)
+                    dateInput.addEventListener('input', function () {
+                        const dateValue = dateInput.value;
+                        if (dateValue) {
+                            const year = dateValue.split('-')[0];
+                            if (year.length > 4) {
+                                dateAlert.style.display = 'block';
+                            } else {
+                                dateAlert.style.display = 'none';
+                            }
+                        } else {
+                            dateAlert.style.display = 'none';
+                        }
+                    });
+
+                    // WhatsApp button functionality
+                    document.getElementById('whatsappButton').addEventListener('click', function () {
+                        const name = document.querySelector('input[name="name"]').value;
+                        const phone = document.querySelector('input[name="phone"]').value;
+                        const address = document.querySelector('input[name="address"]').value;
+                        const date = document.querySelector('input[name="date"]').value;
+
+                        // Check if all fields are filled and phone/date are valid
+                        const phoneValid = phone.length === 10;
+                        const dateYear = date ? date.split('-')[0] : '';
+                        const dateValid = dateYear.length === 4;
+
+                        if (name && phone && address && date && phoneValid && dateValid) {
+                            const message = `Booking Request: Name: ${name}, Phone: ${phone}, Address: ${address}, Date: ${date}`;
+                            const whatsappUrl = `https://wa.me/+918147659246?text=${encodeURIComponent(message)}`;
+                            window.open(whatsappUrl, '_blank');
+                        }
+                    });
+                });
+            </script>
+        </div>
+    </div>
+</section>
             <!-- Font Awesome for icons -->
             <link rel="stylesheet"
                 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -1016,606 +1029,629 @@
             <!-- about-section end -->
 
 
-            <!-- funfact-section -->
-            <section class="funfact-section">
-                <div class="auto-container">
-                    <div class="inner-container clearfix wow fadeInLeft animated animated" data-wow-delay="00ms"
-                        data-wow-duration="1500ms">
-                        <div class="counter-block-one">
-                            <div class="inner-box">
-                                <div class="shap-box" style="background-image: url(assets/images/icons/line-1.png);">
-                                </div>
-                                <div class="icon-box"><i class="flaticon-roof-2"></i></div>
-                                <div class="count-outer count-box">
-                                    <span class="count-text" data-speed="1500" data-stop="5">0</span><span>k</span>
-                                </div>
-                                <h3>Projects Competed Successfully</h3>
-                            </div>
-                        </div>
-                        <div class="counter-block-one">
-                            <div class="inner-box">
-                                <div class="shap-box" style="background-image: url(assets/images/icons/line-2.png);">
-                                </div>
-                                <div class="icon-box"><i class="flaticon-labor"></i></div>
-                                <div class="count-outer count-box">
-                                    <span class="count-text" data-speed="1500" data-stop="84">0</span>
-                                </div>
-                                <h3>Professional Workers in Company</h3>
-                            </div>
-                        </div>
-                        <div class="counter-block-one">
-                            <div class="inner-box">
-                                <div class="shap-box" style="background-image: url(assets/images/icons/line-1.png);">
-                                </div>
-                                <div class="icon-box"><i class="flaticon-user"></i></div>
-                                <div class="count-outer count-box">
-                                    <span class="count-text" data-speed="1500" data-stop="12">0</span><span>+</span>
-                                </div>
-                                <h3>Customers Benefit Every Day</h3>
-                            </div>
-                        </div>
-                        <div class="counter-block-one">
-                            <div class="inner-box">
-                                <div class="shap-box" style="background-image: url(assets/images/icons/line-1.png);">
-                                </div>
-                                <div class="icon-box"><i class="flaticon-medal"></i></div>
-                                <div class="count-outer count-box">
-                                    <span>0</span><span class="count-text" data-speed="1500" data-stop="5">0</span>
-                                </div>
-                                <h3>Received Awards & Certifications</h3>
-                            </div>
-                        </div>
+          <!-- funfact-section -->
+<section class="funfact-section">
+    <div class="auto-container">
+        <div class="inner-container clearfix wow fadeInLeft animated animated" data-wow-delay="00ms" data-wow-duration="1500ms">
+            
+            <div class="counter-block-one">
+                <div class="inner-box">
+                    <!-- Zigzag line removed -->
+                    <div class="icon-box"><i class="flaticon-roof-2"></i></div>
+                    <div class="count-outer count-box">
+                        <span class="count-text" data-speed="1500" data-stop="5">0</span><span>k</span>
                     </div>
-                </div>
-            </section>
-            <!-- funfact-section end -->
-
-
-            <!-- service-section -->
-            <!-- service-section -->
-            <section class="service-section bg-color-1" id="services">
-                <div class="auto-container">
-                    <div class="sec-title centred light">
-                        <h6><i class="flaticon-roof"></i>Our Services</h6>
-                        <h2>We Provide <br /><span>Superior Roofing Services</span></h2>
-                    </div>
-                    <div class="row clearfix">
-                        <!-- Industry Shed Roofing -->
-                        <div class="col-lg-4 col-md-6 col-sm-12 service-block">
-                            <div class="service-block-one wow fadeInUp animated animated" data-wow-delay="00ms"
-                                data-wow-duration="1500ms">
-                                <div class="inner-box">
-                                    <figure class="image-box">
-                                        <a href="javascript:void(0)" class="main-image-link">
-                                            <img src="assets/images/service/i1 .jpg" alt="" class="service-main-img">
-                                        </a>
-                                        <div class="thumbnail-gallery" style="display:none;">
-                                            <img src="assets/images/service/i1 .jpg" alt="Industry Shed Roofing 1">
-                                            <img src="assets/images/service/i2.jpg" alt="Industry Shed Roofing 2">
-                                            <img src="assets/images/service/i3.jpg" alt="Industry Shed Roofing 3">
-                                            <img src="assets/images/service/i4.jpg" alt="Industry Shed Roofing 3">
-                                            <img src="assets/images/service/i5.jpg" alt="Industry Shed Roofing 3">
-                                            <img src="assets/images/service/i6.jpg" alt="Industry Shed Roofing 3">
-                                            <img src="assets/images/service/i7.jpg" alt="Industry Shed Roofing 3">
-                                        </div>
-                                    </figure>
-                                    <div class="lower-content">
-                                        <div class="icon-box"><i class="flaticon-roof-3"></i></div>
-                                        <div class="shap-box"
-                                            style="background-image: url(assets/images/icons/line-3.png);"></div>
-                                        <h3>Industry Shed Roofing</h3>
-                                        <p>Our industrial shed roofing solutions provide durable, weather-resistant
-                                            protection for large-scale facilities. Designed for factories, warehouses,
-                                            and
-                                            storage units with high load-bearing capacity.</p>
-                                        <div class="link">
-                                            <a href="javascript:void(0)" class="view-more-images"
-                                                data-service="industry-shed">View More <i
-                                                    class="flaticon-login"></i></a>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Stone Coated Roofing Sheet -->
-                        <div class="col-lg-4 col-md-6 col-sm-12 service-block">
-                            <div class="service-block-one wow fadeInUp animated animated" data-wow-delay="300ms"
-                                data-wow-duration="1500ms">
-                                <div class="inner-box">
-                                    <figure class="image-box">
-                                        <a href="javascript:void(0)" class="main-image-link">
-                                            <img src="assets/images/service/j6.jpg" alt="" class="service-main-img">
-                                        </a>
-                                        <div class="thumbnail-gallery" style="display:none;">
-                                            <img src="assets/images/service/j1.jpg" alt="Stone Coated Roofing 1">
-                                            <img src="assets/images/service/j2.jpg" alt="Stone Coated Roofing 1">
-                                            <img src="assets/images/service/j3.jpg" alt="Stone Coated Roofing 1">
-                                            <img src="assets/images/service/j4.jpg" alt="Stone Coated Roofing 1">
-                                            <img src="assets/images/service/j5.jpg" alt="Stone Coated Roofing 1">
-                                            <img src="assets/images/service/j6.jpg" alt="Stone Coated Roofing 1">
-                                            <img src="assets/images/service/j7.jpg" alt="Stone Coated Roofing 2">
-                                            <img src="assets/images/service/j8.jpg" alt="Stone Coated Roofing 3">
-                                        </div>
-                                    </figure>
-                                    <div class="lower-content">
-                                        <div class="icon-box"><i class="flaticon-roof-4"></i></div>
-                                        <div class="shap-box"
-                                            style="background-image: url(assets/images/icons/line-3.png);"></div>
-                                        <h3>Stone Coated Roofing Sheet</h3>
-                                        <p>Premium stone-coated metal roofing combines durability with aesthetic appeal.
-                                            Resistant to extreme weather conditions while maintaining the elegant look
-                                            of
-                                            traditional roofing materials.</p>
-                                        <div class="link">
-                                            <a href="javascript:void(0)" class="view-more-images"
-                                                data-service="stone-coated">View More <i class="flaticon-login"></i></a>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Continue with other service blocks in the same pattern -->
-                        <!-- Puff Sheet Roofing Structure -->
-                        <div class="col-lg-4 col-md-6 col-sm-12 service-block">
-                            <div class="service-block-one wow fadeInUp animated animated" data-wow-delay="600ms"
-                                data-wow-duration="1500ms">
-                                <div class="inner-box">
-                                    <figure class="image-box">
-                                        <a href="javascript:void(0)" class="main-image-link">
-                                            <img src="assets/images/service/a1.jpg" alt="" class="service-main-img">
-                                        </a>
-                                        <div class="thumbnail-gallery" style="display:none;">
-                                            <img src="assets/images/service/a1.jpg" alt="Puff Sheet Roofing 1">
-                                            <img src="assets/images/service/a2.jpg" alt="Puff Sheet Roofing 2">
-                                            <img src="assets/images/service/a3.jpg" alt="Puff Sheet Roofing 3">
-                                            <img src="assets/images/service/a4.jpg" alt="Puff Sheet Roofing 3">
-                                            <img src="assets/images/service/a5.jpg" alt="Puff Sheet Roofing 3">
-                                            <img src="assets/images/service/a6.jpg" alt="Puff Sheet Roofing 3">
-                                        </div>
-                                    </figure>
-                                    <div class="lower-content">
-                                        <div class="icon-box"><i class="flaticon-roof-5"></i></div>
-                                        <div class="shap-box"
-                                            style="background-image: url(assets/images/icons/line-3.png);"></div>
-                                        <h3>Puff Sheet Roofing Structure</h3>
-                                        <p>Puff panel roofing offers excellent thermal insulation and noise reduction.
-                                            Ideal
-                                            for commercial buildings requiring energy efficiency and comfortable
-                                            interior
-                                            environments.</p>
-                                        <div class="link">
-                                            <a href="javascript:void(0)" class="view-more-images"
-                                                data-service="puff-sheet">View More <i class="flaticon-login"></i></a>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Continue with all other service blocks following the same pattern -->
-                        <!-- Toughened Glass Roofing Structure -->
-                        <div class="col-lg-4 col-md-6 col-sm-12 service-block" style="margin-top:50px;">
-                            <div class="service-block-one wow fadeInUp animated animated" data-wow-delay="600ms"
-                                data-wow-duration="1500ms">
-                                <div class="inner-box">
-                                    <figure class="image-box">
-                                        <a href="javascript:void(0)" class="main-image-link">
-                                            <img src="assets/images/service/b1.jpg" alt="" class="service-main-img">
-                                        </a>
-                                        <div class="thumbnail-gallery" style="display:none;">
-                                            <img src="assets/images/service/b1.jpg" alt="Toughened Glass Roofing 1">
-                                            <img src="assets/images/service/b2.jpg" alt="Toughened Glass Roofing 2">
-                                            <img src="assets/images/service/b3.jpg" alt="Toughened Glass Roofing 3">
-                                            <img src="assets/images/service/b4.jpg" alt="Toughened Glass Roofing 3">
-                                            <img src="assets/images/service/b5.jpg" alt="Toughened Glass Roofing 3">
-                                            <img src="assets/images/service/b6.jpg" alt="Toughened Glass Roofing 3">
-                                            <img src="assets/images/service/b7.jpg" alt="Toughened Glass Roofing 3">
-                                            <img src="assets/images/service/b8.jpg" alt="Toughened Glass Roofing 3">
-                                            <img src="assets/images/service/b9.jpg" alt="Toughened Glass Roofing 3">
-                                            <img src="assets/images/service/b10.jpg" alt="Toughened Glass Roofing 3">
-                                            <img src="assets/images/service/b11.jpg" alt="Toughened Glass Roofing 3">
-                                            <img src="assets/images/service/b12.jpg" alt="Toughened Glass Roofing 3">
-                                        </div>
-                                    </figure>
-                                    <div class="lower-content">
-                                        <div class="icon-box"><i class="flaticon-roof-5"></i></div>
-                                        <div class="shap-box"
-                                            style="background-image: url(assets/images/icons/line-3.png);"></div>
-                                        <h3>Toughened Glass Roofing Structure</a></h3>
-                                        <p>Luxury glass roofing solutions that provide natural lighting while
-                                            maintaining
-                                            structural integrity. Safety-tempered glass options available for all
-                                            architectural needs.</p>
-                                        <div class="link">
-                                            <a href="javascript:void(0)" class="view-more-images"
-                                                data-service="glass-roofing">View More <i
-                                                    class="flaticon-login"></i></a>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Mangalore Tiles Roof Structure -->
-                        <div class="col-lg-4 col-md-6 col-sm-12 service-block" style="margin-top:50px;">
-                            <div class="service-block-one wow fadeInUp animated animated" data-wow-delay="600ms"
-                                data-wow-duration="1500ms">
-                                <div class="inner-box">
-                                    <figure class="image-box">
-                                        <a href="javascript:void(0)" class="main-image-link">
-                                            <img src="assets/images/service/d1.jpg" alt="" class="service-main-img">
-                                        </a>
-                                        <div class="thumbnail-gallery" style="display:none;">
-                                            <img src="assets/images/service/d1.jpg" alt="Mangalore Tiles 1">
-                                            <img src="assets/images/service/d2.jpg" alt="Mangalore Tiles 2">
-                                            <img src="assets/images/service/d3.jpg" alt="Mangalore Tiles 3">
-                                            <img src="assets/images/service/d4.jpg" alt="Mangalore Tiles 2">
-                                            <img src="assets/images/service/d5.jpg" alt="Mangalore Tiles 3">
-                                            <img src="assets/images/service/d6.jpg" alt="Mangalore Tiles 2">
-                                            <img src="assets/images/service/d7.jpg" alt="Mangalore Tiles 3">
-                                            <img src="assets/images/service/d8.jpg" alt="Mangalore Tiles 2">
-                                            <img src="assets/images/service/d9.jpg" alt="Mangalore Tiles 3">
-                                            <img src="assets/images/service/d10.jpg" alt="Mangalore Tiles 2">
-                                            <img src="assets/images/service/d11.jpg" alt="Mangalore Tiles 3">
-
-                                        </div>
-                                    </figure>
-                                    <div class="lower-content">
-                                        <div class="icon-box"><i class="flaticon-roof-5"></i></div>
-                                        <div class="shap-box"
-                                            style="background-image: url(assets/images/icons/line-3.png);"></div>
-                                        <h3>Mangalore Tiles Roof Structure</h3>
-                                        <p>Traditional Mangalore tile roofing with modern installation techniques. These
-                                            classic clay tiles offer natural temperature regulation and timeless
-                                            aesthetic
-                                            appeal</p>
-                                        <div class="link">
-                                            <a href="javascript:void(0)" class="view-more-images"
-                                                data-service="mangalore-tiles">View More <i
-                                                    class="flaticon-login"></i></a>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Shingles Roofing Structure -->
-                        <div class="col-lg-4 col-md-6 col-sm-12 service-block" style="margin-top:50px;">
-                            <div class="service-block-one wow fadeInUp animated animated" data-wow-delay="600ms"
-                                data-wow-duration="1500ms">
-                                <div class="inner-box">
-                                    <figure class="image-box">
-                                        <a href="javascript:void(0)" class="main-image-link">
-                                            <img src="assets/images/service/e1.jpg" alt="" class="service-main-img">
-                                        </a>
-                                        <div class="thumbnail-gallery" style="display:none;">
-                                            <img src="assets/images/service/e1.jpg" alt="Shingles Roofing 1">
-                                            <img src="assets/images/service/e2.jpg" alt="Shingles Roofing 2">
-                                            <img src="assets/images/service/e3.jpg" alt="Shingles Roofing 3">
-                                            <img src="assets/images/service/e4.jpg" alt="Shingles Roofing 3">
-                                            <img src="assets/images/service/e5.jpg" alt="Shingles Roofing 3">
-                                            <img src="assets/images/service/e6.jpg" alt="Shingles Roofing 3">
-                                            <img src="assets/images/service/e7.jpg" alt="Shingles Roofing 3">
-                                            <img src="assets/images/service/e8.jpg" alt="Shingles Roofing 3">
-                                            <img src="assets/images/service/e9.jpg" alt="Shingles Roofing 3">
-                                        </div>
-                                    </figure>
-                                    <div class="lower-content">
-                                        <div class="icon-box"><i class="flaticon-roof-5"></i></div>
-                                        <div class="shap-box"
-                                            style="background-image: url(assets/images/icons/line-3.png);"></div>
-                                        <h3>Shingles Roofing Structure</h3>
-                                        <p>High-quality shingle roofing options including asphalt, composite, and
-                                            designer
-                                            shingles. Available in various colors and styles to complement any
-                                            architectural
-                                            design.</p>
-                                        <div class="link">
-                                            <a href="javascript:void(0)" class="view-more-images"
-                                                data-service="shingles-roofing">View More <i
-                                                    class="flaticon-login"></i></a>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Image Popup Modal -->
-            <div class="image-popup" style="display: none;">
-                <span class="close-btn">&times;</span>
-                <div class="popup-container">
-                    <div class="slider-container">
-                        <div class="slider-track"></div>
-                    </div>
-                    <button class="nav-btn prev-btn">❮</button>
-                    <button class="nav-btn next-btn">❯</button>
+                    <h3>Projects Competed Successfully</h3>
                 </div>
             </div>
 
-            <style>
-                /* Card styles */
-                .service-block-one {
-                    height: 100%;
-                }
+            <div class="counter-block-one">
+                <div class="inner-box">
+                    <!-- Zigzag line removed -->
+                    <div class="icon-box"><i class="flaticon-labor"></i></div>
+                    <div class="count-outer count-box">
+                        <span class="count-text" data-speed="1500" data-stop="84">0</span>
+                    </div>
+                    <h3>Professional Workers in Company</h3>
+                </div>
+            </div>
 
-                .inner-box {
-                    height: 100%;
-                    display: flex;
-                    flex-direction: column;
-                }
+            <div class="counter-block-one">
+                <div class="inner-box">
+                    <!-- Zigzag line removed -->
+                    <div class="icon-box"><i class="flaticon-user"></i></div>
+                    <div class="count-outer count-box">
+                        <span class="count-text" data-speed="1500" data-stop="12">0</span><span>+</span>
+                    </div>
+                    <h3>Customers Benefit Every Day</h3>
+                </div>
+            </div>
 
-                .image-box {
-                    height: 200px;
-                    overflow: hidden;
-                }
+            <div class="counter-block-one">
+                <div class="inner-box">
+                    <!-- Zigzag line removed -->
+                    <div class="icon-box"><i class="flaticon-medal"></i></div>
+                    <div class="count-outer count-box">
+                        <span>0</span><span class="count-text" data-speed="1500" data-stop="5">0</span>
+                    </div>
+                    <h3>Received Awards & Certifications</h3>
+                </div>
+            </div>
 
-                .image-box img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                    transition: transform 0.3s ease;
-                }
-
-                .image-box img:hover {
-                    transform: scale(1.03);
-                }
-
-                /* Popup styles */
-                .image-popup {
-                    position: fixed;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    background-color: rgba(0, 0, 0, 0.9);
-                    z-index: 1000;
-                    display: none;
-                    /* Start hidden */
-                    align-items: center;
-                    justify-content: center;
-                }
-
-                .popup-container {
-                    width: 90%;
-                    max-width: 1000px;
-                    height: 80vh;
-                    position: relative;
-                    background: transparent;
-                    /* Make sure container doesn't block clicks */
-                    pointer-events: none;
-                    /* Allow clicks to pass through */
-                }
-
-                .slider-container {
-                    width: 100%;
-                    height: 100%;
-                    overflow: hidden;
-                    position: relative;
-                    pointer-events: auto;
-                    /* Enable clicks on slider */
-                }
-
-                .slider-track {
-                    display: flex;
-                    height: 100%;
-                    transition: transform 0.5s ease;
-                    pointer-events: auto;
-                    /* Enable clicks on track */
-                }
-
-                .slider-track img {
-                    min-width: 100%;
-                    height: 100%;
-                    object-fit: contain;
-                    padding: 0 10px;
-                    box-sizing: border-box;
-                    flex-shrink: 0;
-                    pointer-events: auto;
-                    /* Enable clicks on images */
-                }
+        </div>
+    </div>
+</section>
+<!-- funfact-section end -->
 
 
 
-                /* Navigation buttons */
-                .nav-btn {
-                    position: absolute;
-                    top: 50%;
-                    transform: translateY(-50%);
-                    background: rgba(0, 0, 0, 0.5);
-                    color: white;
-                    border: none;
-                    width: 40px;
-                    height: 40px;
-                    border-radius: 50%;
-                    font-size: 20px;
-                    cursor: pointer;
-                    z-index: 1001;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    outline: none;
-                    pointer-events: auto;
-                    /* Enable clicks on nav buttons */
-                }
+  <!-- service-section -->
+<section class="service-section bg-color-1" id="services">
+    <div class="auto-container">
+        <div class="sec-title centred light">
+            <h6><i class="flaticon-roof"></i>Our Services</h6>
+            <h2>We Provide <br /><span>Superior Roofing Services</span></h2>
+        </div>
+        <div class="row clearfix">
+            <!-- Industry Shed Roofing -->
+            <div class="col-lg-4 col-md-6 col-sm-12 service-block">
+                <div class="service-block-one wow fadeInUp animated" data-wow-delay="00ms" data-wow-duration="1500ms">
+                    <div class="inner-box">
+                        <figure class="image-box">
+                            <a href="javascript:void(0)" class="main-image-link">
+                                <img src="assets\images\service\i1 .jpg" alt="Industry Shed Roofing 1">
+                            </a>
+                            <div class="thumbnail-gallery" style="display:none;">
+                                <img src="assets\images\service\i1 .jpg" alt="Industry Shed Roofing 1">
+                                <img src="assets/images/service/i2.jpg" alt="Industry Shed Roofing 2">
+                                <img src="assets/images/service/i3.jpg" alt="Industry Shed Roofing 3">
+                                <img src="assets/images/service/i4.jpg" alt="Industry Shed Roofing 4">
+                                <img src="assets/images/service/i5.jpg" alt="Industry Shed Roofing 5">
+                                <img src="assets/images/service/i6.jpg" alt="Industry Shed Roofing 6">
+                                <img src="assets/images/service/i7.jpg" alt="Industry Shed Roofing 7">
+                              
+                            </div>
+                        </figure>
+                        <div class="lower-content">
+                            <div class="icon-box"><i class="flaticon-roof-3"></i></div>
+                         
+                            <h3>Industry Shed Roofing</h3>
+                            <p>Our industrial shed roofing solutions provide durable, weather-resistant protection for large-scale facilities. Designed for factories, warehouses, and storage units with high load-bearing capacity.</p>
+                            <div class="link">
+                                <a href="javascript:void(0)" class="view-more-images" data-service="industry-shed">View More <i class="flaticon-login"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-                .prev-btn {
-                    left: 10px;
-                }
+            <!-- Stone Coated Roofing Sheet -->
+            <div class="col-lg-4 col-md-6 col-sm-12 service-block">
+                <div class="service-block-one wow fadeInUp animated" data-wow-delay="300ms" data-wow-duration="1500ms">
+                    <div class="inner-box">
+                        <figure class="image-box">
+                            <a href="javascript:void(0)" class="main-image-link">
+                                <img src="assets/images/service/j6.jpg" alt="" class="service-main-img">
+                            </a>
+                            <div class="thumbnail-gallery" style="display:none;">
+                                <img src="assets/images/service/j1.jpg" alt="Stone Coated Roofing 1">
+                                <img src="assets/images/service/j2.jpg" alt="Stone Coated Roofing 2">
+                                <img src="assets/images/service/j3.jpg" alt="Stone Coated Roofing 3">
+                                <img src="assets/images/service/j4.jpg" alt="Stone Coated Roofing 4">
+                                <img src="assets/images/service/j5.jpg" alt="Stone Coated Roofing 5">
+                                <img src="assets/images/service/j6.jpg" alt="Stone Coated Roofing 6">
+                                <img src="assets/images/service/j7.jpg" alt="Stone Coated Roofing 7">
+                              
+                            </div>
+                        </figure>
+                        <div class="lower-content">
+                            <div class="icon-box"><i class="flaticon-roof-4"></i></div>
+                          
+                            <h3>Stone Coated Roofing Sheet</h3>
+                            <p>Premium stone-coated metal roofing combines durability with aesthetic appeal. Resistant to extreme weather conditions while maintaining the elegant look of traditional roofing materials.</p>
+                            <div class="link">
+                                <a href="javascript:void(0)" class="view-more-images" data-service="stone-coated">View More <i class="flaticon-login"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-                .next-btn {
-                    right: 10px;
-                }
-            </style>
+            <!-- Puff Sheet Roofing Structure -->
+            <div class="col-lg-4 col-md-6 col-sm-12 service-block">
+                <div class="service-block-one wow fadeInUp animated" data-wow-delay="600ms" data-wow-duration="1500ms">
+                    <div class="inner-box">
+                        <figure class="image-box">
+                            <a href="javascript:void(0)" class="main-image-link">
+                                <img src="assets/images/service/a1.jpg" alt="" class="service-main-img">
+                            </a>
+                            <div class="thumbnail-gallery" style="display:none;">
+                                <img src="assets/images/service/a1.jpg" alt="Puff Sheet Roofing 1">
+                                <img src="assets/images/service/a2.jpg" alt="Puff Sheet Roofing 2">
+                                <img src="assets/images/service/a3.jpg" alt="Puff Sheet Roofing 3">
+                                <img src="assets/images/service/a4.jpg" alt="Puff Sheet Roofing 4">
+                                <img src="assets/images/service/a5.jpg" alt="Puff Sheet Roofing 5">
+                                <img src="assets/images/service/a6.jpg" alt="Puff Sheet Roofing 6">
+                            </div>
+                        </figure>
+                        <div class="lower-content">
+                            <div class="icon-box"><i class="flaticon-roof-5"></i></div>
+                         
+                            <h3>Puff Sheet Roofing Structure</h3>
+                            <p>Puff panel roofing offers excellent thermal insulation and noise reduction. Ideal for commercial buildings requiring energy efficiency and comfortable interior environments.</p>
+                            <div class="link">
+                                <a href="javascript:void(0)" class="view-more-images" data-service="puff-sheet">View More <i class="flaticon-login"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-            <script>
-                document.addEventListener('DOMContentLoaded', function () {
-                    const popup = document.querySelector('.image-popup');
-                    const sliderTrack = document.querySelector('.slider-track');
-                    const closeBtn = document.querySelector('.close-btn');
-                    const prevBtn = document.querySelector('.prev-btn');
-                    const nextBtn = document.querySelector('.next-btn');
-                    const popupContainer = document.querySelector('.popup-container');
+            <!-- Toughened Glass Roofing Structure -->
+            <div class="col-lg-4 col-md-6 col-sm-12 service-block" style="margin-top:50px;">
+                <div class="service-block-one wow fadeInUp animated" data-wow-delay="600ms" data-wow-duration="1500ms">
+                    <div class="inner-box">
+                        <figure class="image-box">
+                            <a href="javascript:void(0)" class="main-image-link">
+                                <img src="assets/images/service/b1.jpg" alt="" class="service-main-img">
+                            </a>
+                            <div class="thumbnail-gallery" style="display:none;">
+                                <img src="assets/images/service/b1.jpg" alt="Toughened Glass Roofing 1">
+                                <img src="assets/images/service/b2.jpg" alt="Toughened Glass Roofing 2">
+                                <img src="assets/images/service/b3.jpg" alt="Toughened Glass Roofing 3">
+                                <img src="assets/images/service/b4.jpg" alt="Toughened Glass Roofing 4">
+                                <img src="assets/images/service/b5.jpg" alt="Toughened Glass Roofing 5">
+                                <img src="assets/images/service/b6.jpg" alt="Toughened Glass Roofing 6">
+                                <img src="assets/images/service/b7.jpg" alt="Toughened Glass Roofing 7">
+                                <img src="assets/images/service/b8.jpg" alt="Toughened Glass Roofing 8">
+                                <img src="assets/images/service/b9.jpg" alt="Toughened Glass Roofing 9">
+                                <img src="assets/images/service/b10.jpg" alt="Toughened Glass Roofing 10">
+                                <img src="assets/images/service/b11.jpg" alt="Toughened Glass Roofing 11">
+                                <img src="assets/images/service/b12.jpg" alt="Toughened Glass Roofing 12">
+                            </div>
+                        </figure>
+                        <div class="lower-content">
+                            <div class="icon-box"><i class="flaticon-roof-5"></i></div>
+               
+                            <h3>Toughened Glass Roofing Structure</h3>
+                            <p>Luxury glass roofing solutions that provide natural lighting while maintaining structural integrity. Safety-tempered glass options available for all architectural needs.</p>
+                            <div class="link">
+                                <a href="javascript:void(0)" class="view-more-images" data-service="glass-roofing">View More <i class="flaticon-login"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-                    let currentImages = [];
-                    let currentIndex = 0;
-                    let sliderWidth = 0;
+            <!-- Mangalore Tiles Roof Structure -->
+            <div class="col-lg-4 col-md-6 col-sm-12 service-block" style="margin-top:50px;">
+                <div class="service-block-one wow fadeInUp animated" data-wow-delay="600ms" data-wow-duration="1500ms">
+                    <div class="inner-box">
+                        <figure class="image-box">
+                            <a href="javascript:void(0)" class="main-image-link">
+                                <img src="assets/images/service/d1.jpg" alt="" class="service-main-img">
+                            </a>
+                            <div class="thumbnail-gallery" style="display:none;">
+                                <img src="assets/images/service/d1.jpg" alt="Mangalore Tiles 1">
+                                <img src="assets/images/service/d2.jpg" alt="Mangalore Tiles 2">
+                                <img src="assets/images/service/d3.jpg" alt="Mangalore Tiles 3">
+                                <img src="assets/images/service/d4.jpg" alt="Mangalore Tiles 4">
+                                <img src="assets/images/service/d5.jpg" alt="Mangalore Tiles 5">
+                                <img src="assets/images/service/d6.jpg" alt="Mangalore Tiles 6">
+                                <img src="assets/images/service/d7.jpg" alt="Mangalore Tiles 7">
+                                <img src="assets/images/service/d8.jpg" alt="Mangalore Tiles 8">
+                                <img src="assets/images/service/d9.jpg" alt="Mangalore Tiles 9">
+                                <img src="assets/images/service/d10.jpg" alt="Mangalore Tiles 10">
+                                <img src="assets/images/service/d11.jpg" alt="Mangalore Tiles 11">
+                            </div>
+                        </figure>
+                        <div class="lower-content">
+                            <div class="icon-box"><i class="flaticon-roof-5"></i></div>
+                        
+                            <h3>Mangalore Tiles Roof Structure</h3>
+                            <p>Traditional Mangalore tile roofing with modern installation techniques. These classic clay tiles offer natural temperature regulation and timeless aesthetic appeal.</p>
+                            <div class="link">
+                                <a href="javascript:void(0)" class="view-more-images" data-service="mangalore-tiles">View More <i class="flaticon-login"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-                    // Handle card clicks (entire card except the "View More" button)
-                    document.querySelectorAll('.service-block-one').forEach(card => {
-                        card.addEventListener('click', function (e) {
-                            // Don't trigger if clicking on the view more button or its children
-                            if (e.target.closest('.view-more-images')) {
-                                return;
-                            }
+            <!-- Shingles Roofing Structure -->
+            <div class="col-lg-4 col-md-6 col-sm-12 service-block" style="margin-top:50px;">
+                <div class="service-block-one wow fadeInUp animated" data-wow-delay="600ms" data-wow-duration="1500ms">
+                    <div class="inner-box">
+                        <figure class="image-box">
+                            <a href="javascript:void(0)" class="main-image-link">
+                                <img src="assets/images/service/e1.jpg" alt="" class="service-main-img">
+                            </a>
+                            <div class="thumbnail-gallery" style="display:none;">
+                                <img src="assets/images/service/e1.jpg" alt="Shingles Roofing 1">
+                                <img src="assets/images/service/e2.jpg" alt="Shingles Roofing 2">
+                                <img src="assets/images/service/e3.jpg" alt="Shingles Roofing 3">
+                                <img src="assets/images/service/e4.jpg" alt="Shingles Roofing 4">
+                                <img src="assets/images/service/e5.jpg" alt="Shingles Roofing 5">
+                                <img src="assets/images/service/e6.jpg" alt="Shingles Roofing 6">
+                                <img src="assets/images/service/e7.jpg" alt="Shingles Roofing 7">
+                                <img src="assets/images/service/e8.jpg" alt="Shingles Roofing 8">
+                                <img src="assets/images/service/e9.jpg" alt="Shingles Roofing 9">
+                            </div>
+                        </figure>
+                        <div class="lower-content">
+                            <div class="icon-box"><i class="flaticon-roof-5"></i></div>
+                     
+                            <h3>Shingles Roofing Structure</h3>
+                            <p>High-quality shingle roofing options including asphalt, composite, and designer shingles. Available in various colors and styles to complement any architectural design.</p>
+                            <div class="link">
+                                <a href="javascript:void(0)" class="view-more-images" data-service="shingles-roofing">View More <i class="flaticon-login"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-                            const thumbnails = card.querySelectorAll('.thumbnail-gallery img');
-                            currentImages = Array.from(thumbnails);
-                            initSlider();
-                        });
-                    });
+<!-- Image Popup Modal -->
+<div class="image-popup" style="display: none;">
+    <span class="close-btn">×</span>
+    <div class="popup-container">
+        <div class="slider-container">
+            <div class="slider-track"></div>
+        </div>
+        <button class="nav-btn prev-btn">❮</button>
+        <button class="nav-btn next-btn">❯</button>
+    </div>
+</div>
 
-                    // Handle "View More" button clicks (unchanged)
-                    document.querySelectorAll('.view-more-images').forEach(btn => {
-                        btn.addEventListener('click', function (e) {
-                            e.stopPropagation(); // Prevent card click from triggering
-                            const card = this.closest('.service-block-one');
-                            const thumbnails = card.querySelectorAll('.thumbnail-gallery img');
-                            currentImages = Array.from(thumbnails);
-                            initSlider();
-                        });
-                    });
+<style>
+    /* Card styles */
+    .service-block-one {
+        height: 100%;
+        position: relative;
+        z-index: 1;
+    }
 
-                    // Handle main image clicks (unchanged)
-                    document.querySelectorAll('.main-image-link').forEach(link => {
-                        link.addEventListener('click', function (e) {
-                            e.preventDefault();
-                            e.stopPropagation(); // Prevent card click from triggering
-                            const card = this.closest('.service-block-one');
-                            const thumbnails = card.querySelectorAll('.thumbnail-gallery img');
-                            currentImages = Array.from(thumbnails);
-                            initSlider();
-                        });
-                    });
+    .inner-box {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
 
-                    // Rest of the code remains exactly the same...
-                    // Initialize slider
-                    function initSlider() {
-                        sliderTrack.innerHTML = '';
+    .image-box {
+        height: 200px;
+        overflow: hidden;
+    }
 
-                        // Add all images to slider
-                        currentImages.forEach(img => {
-                            const slide = document.createElement('img');
-                            slide.src = img.src;
-                            slide.alt = img.alt;
-                            sliderTrack.appendChild(slide);
-                        });
+    .image-box img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+    }
 
-                        // Show popup
-                        popup.style.display = 'flex';
-                        document.body.style.overflow = 'hidden';
+    .image-box img:hover {
+        transform: scale(1.03);
+    }
 
-                        // Calculate slider width after images load
-                        setTimeout(() => {
-                            sliderWidth = document.querySelector('.slider-container').offsetWidth;
-                            updateSliderPosition();
-                        }, 50);
-                    }
+    /* Popup styles */
+    .image-popup {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        z-index: 1000;
+        display: none;
+        align-items: center;
+        justify-content: center;
+    }
 
-                    // Update slider position
-                    function updateSliderPosition() {
-                        sliderTrack.style.transform = `translateX(-${currentIndex * sliderWidth}px)`;
-                    }
+    .image-popup.hidden {
+        display: none !important;
+    }
 
-                    // Next image
-                    function nextImage() {
-                        if (currentIndex < currentImages.length - 1) {
-                            currentIndex++;
-                            updateSliderPosition();
-                        } else {
-                            // Loop back to first image
-                            currentIndex = 0;
-                            updateSliderPosition();
-                        }
-                    }
+    .popup-container {
+        width: 90%;
+        max-width: 1000px;
+        height: 80vh;
+        position: relative;
+        background: transparent;
+        pointer-events: auto;
+    }
 
-                    // Previous image
-                    function prevImage() {
-                        if (currentIndex > 0) {
-                            currentIndex--;
-                            updateSliderPosition();
-                        } else {
-                            // Loop to last image
-                            currentIndex = currentImages.length - 1;
-                            updateSliderPosition();
-                        }
-                    }
+    .slider-container {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        position: relative;
+        pointer-events: auto;
+    }
 
-                    // Close popup
-                    function closePopup() {
-                        popup.style.display = 'none';
-                        document.body.style.overflow = 'auto';
-                        currentIndex = 0; // Reset to first image
-                    }
+    .slider-track {
+        display: flex;
+        height: 100%;
+        transition: transform 0.5s ease;
+        pointer-events: auto;
+    }
 
-                    // Close button event
-                    closeBtn.addEventListener('click', closePopup);
+    .slider-track img {
+        min-width: 100%;
+        height: 100%;
+        object-fit: contain;
+        padding: 0 10px;
+        box-sizing: border-box;
+        flex-shrink: 0;
+        pointer-events: auto;
+    }
 
-                    // Navigation buttons
-                    prevBtn.addEventListener('click', function (e) {
-                        e.stopPropagation();
-                        prevImage();
-                    });
+    /* Navigation buttons */
+    .nav-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        font-size: 20px;
+        cursor: pointer;
+        z-index: 1001;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        outline: none;
+        pointer-events: auto;
+    }
 
-                    nextBtn.addEventListener('click', function (e) {
-                        e.stopPropagation();
-                        nextImage();
-                    });
+    .prev-btn {
+        left: 10px;
+    }
 
-                    // Close when clicking outside content (on the overlay)
-                    popup.addEventListener('click', function (e) {
-                        // Only close if clicking directly on the overlay (not children)
-                        if (e.target === popup) {
-                            closePopup();
-                        }
-                    });
+    .next-btn {
+        right: 10px;
+    }
 
-                    // Keyboard navigation
-                    document.addEventListener('keydown', function (e) {
-                        if (popup.style.display === 'flex') {
-                            if (e.key === 'ArrowRight') {
-                                nextImage();
-                            } else if (e.key === 'ArrowLeft') {
-                                prevImage();
-                            } else if (e.key === 'Escape') {
-                                closePopup();
-                            }
-                        }
-                    });
+    /* Close button styles */
+    .close-btn {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        color: white;
+        font-size: 40px;
+        font-weight: bold;
+        cursor: pointer;
+        z-index: 1002;
+        padding: 10px;
+        line-height: 1;
+        pointer-events: auto;
+        transition: color 0.3s ease;
+    }
 
-                    // Handle window resize
-                    window.addEventListener('resize', function () {
-                        if (popup.style.display === 'flex') {
-                            sliderWidth = document.querySelector('.slider-container').offsetWidth;
-                            updateSliderPosition();
-                        }
-                    });
-                });
-            </script>
-            <!-- service-section end -->
+    .close-btn:hover {
+        color: #bbb;
+    }
 
+    /* Class to force hiding the popup */
+    .hidden {
+        display: none !important;
+    }
 
+    /* Ensure body can scroll after popup closes */
+    body.modal-open {
+        overflow: hidden !important;
+        position: fixed !important;
+        width: 100%;
+        height: 100%;
+    }
 
+    body {
+        overflow: auto !important;
+        position: static !important;
+        width: auto;
+        height: auto;
+    }
+
+    html.modal-open {
+        overflow: hidden !important;
+    }
+
+    html {
+        overflow: auto !important;
+    }
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    let popup = document.querySelector('.image-popup');
+    const sliderTrack = document.querySelector('.slider-track');
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+    const popupContainer = document.querySelector('.popup-container');
+
+    let currentImages = [];
+    let currentIndex = 0;
+    let sliderWidth = 0;
+    let isPopupOpen = false;
+
+    // Handle card clicks (entire card except the "View More" button)
+    document.querySelectorAll('.service-block-one').forEach(card => {
+        card.addEventListener('click', function (e) {
+            if (e.target.closest('.view-more-images')) {
+                return;
+            }
+            console.log('Card clicked at:', new Date().toISOString());
+            const thumbnails = card.querySelectorAll('.thumbnail-gallery img');
+            currentImages = Array.from(thumbnails);
+            initSlider();
+        });
+    });
+
+    // Handle "View More" button clicks
+    document.querySelectorAll('.view-more-images').forEach(btn => {
+        btn.addEventListener('click', function (e) {
+            e.stopPropagation();
+            console.log('View More button clicked at:', new Date().toISOString());
+            const card = this.closest('.service-block-one');
+            const thumbnails = card.querySelectorAll('.thumbnail-gallery img');
+            currentImages = Array.from(thumbnails);
+            initSlider();
+        });
+    });
+
+    // Handle main image clicks
+    document.querySelectorAll('.main-image-link').forEach(link => {
+        link.addEventListener('click', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            console.log('Main image link clicked at:', new Date().toISOString());
+            const card = this.closest('.service-block-one');
+            const thumbnails = card.querySelectorAll('.thumbnail-gallery img');
+            currentImages = Array.from(thumbnails);
+            initSlider();
+        });
+    });
+
+    // Initialize slider
+    function initSlider() {
+        if (!popup) {
+            console.error('Popup element not found');
+            return;
+        }
+        sliderTrack.innerHTML = '';
+        currentImages.forEach(img => {
+            const slide = document.createElement('img');
+            slide.src = img.src;
+            slide.alt = img.alt;
+            sliderTrack.appendChild(slide);
+        });
+        popup.style.display = 'flex';
+        popup.classList.remove('hidden');
+        isPopupOpen = true;
+        document.body.classList.add('modal-open');
+        document.documentElement.classList.add('modal-open');
+        setTimeout(() => {
+            sliderWidth = document.querySelector('.slider-container').offsetWidth;
+            updateSliderPosition();
+        }, 50);
+    }
+
+    // Update slider position
+    function updateSliderPosition() {
+        sliderTrack.style.transform = `translateX(-${currentIndex * sliderWidth}px)`;
+    }
+
+    // Next image
+    function nextImage() {
+        if (currentIndex < currentImages.length - 1) {
+            currentIndex++;
+            updateSliderPosition();
+        } else {
+            currentIndex = 0;
+            updateSliderPosition();
+        }
+    }
+
+    // Previous image
+    function prevImage() {
+        if (currentIndex > 0) {
+            currentIndex--;
+            updateSliderPosition();
+        } else {
+            currentIndex = currentImages.length - 1;
+            updateSliderPosition();
+        }
+    }
+
+    // Close popup with simplified reset
+    function closePopup() {
+        console.log('closePopup called at:', new Date().toISOString());
+        if (!popup) {
+            console.error('Popup element not found during closePopup');
+            return;
+        }
+        // Hide popup
+        popup.style.display = 'none';
+        popup.classList.add('hidden');
+        // Reset popup content
+        sliderTrack.innerHTML = '';
+        currentImages = [];
+        currentIndex = 0;
+        isPopupOpen = false;
+        // Reset body and html state
+        document.body.classList.remove('modal-open');
+        document.documentElement.classList.remove('modal-open');
+        document.body.style.cssText = '';
+        document.documentElement.style.cssText = '';
+        // Ensure pointer events are restored
+        document.querySelectorAll('.service-block-one').forEach(card => {
+            card.style.pointerEvents = 'auto';
+        });
+        // Debug log
+        setTimeout(() => {
+            const computedDisplay = window.getComputedStyle(popup).display;
+            const bodyOverflow = window.getComputedStyle(document.body).overflow;
+            console.log('Popup computed display after close:', computedDisplay);
+            console.log('Body overflow after close:', bodyOverflow);
+        }, 100);
+    }
+
+    // Handle document clicks
+    document.addEventListener('click', function (e) {
+        const closeBtn = e.target.closest('.close-btn');
+        const popupElement = e.target.closest('.image-popup');
+        const navBtn = e.target.closest('.nav-btn');
+
+        if (closeBtn) {
+            e.preventDefault();
+            e.stopPropagation();
+            console.log('Close button clicked at:', new Date().toISOString());
+            closePopup();
+        } else if (isPopupOpen && popupElement && !navBtn) {
+            e.stopPropagation();
+            console.log('Clicked on popup background or image at:', new Date().toISOString());
+        }
+    });
+
+    // Navigation buttons
+    prevBtn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        prevImage();
+    });
+
+    nextBtn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        nextImage();
+    });
+
+    // Keyboard navigation
+    document.addEventListener('keydown', function (e) {
+        if (isPopupOpen) {
+            if (e.key === 'ArrowRight') {
+                nextImage();
+            } else if (e.key === 'ArrowLeft') {
+                prevImage();
+            } else if (e.key === 'Escape') {
+                closePopup();
+            }
+        }
+    });
+
+    // Handle window resize
+    window.addEventListener('resize', function () {
+        if (isPopupOpen) {
+            sliderWidth = document.querySelector('.slider-container').offsetWidth;
+            updateSliderPosition();
+        }
+    });
+});
+</script>
+<!-- service-section end -->
             <!-- chooseus-section end -->
 
 
@@ -1733,107 +1769,107 @@
                 </div>
             </section>
             <!-- project-section end -->
-            <section class="working-section centred"
-                style="background-image: url(assets/images/background/working-bg.jpg);">
-                <div class="large-container">
-                    <div class="sec-title light">
-                        <h6><i class="flaticon-roof"></i>How it’s Work</h6>
-                        <h2>Standard <span>Working Process</span></h2>
-                    </div>
-                    <div class="inner-content">
-                        <div class="row clearfix">
-                            <div class="col-lg-3 col-md-6 col-sm-12 working-block"
-                                style="width: 350px; padding: 0 15px;">
-                                <div class="working-block-one"
-                                    style="height: 450px; display: flex; flex-direction: column;">
-                                    <div class="inner-box" style="display: flex; flex-direction: column; height: 100%;">
-                                        <div class="icon-box">
-                                            <span class="count-box">01</span>
-                                            <div class="icon"
-                                                style="background-image: url(assets/images/resource/icon-bg.png);"><i
-                                                    class="flaticon-consulting"></i></div>
-                                        </div>
-                                        <div class="lower-content"
-                                            style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
-                                            <h3><a href="index.html">Consultation</a></h3>
-                                            <div class="pattern-layer"
-                                                style="background-image: url(assets/images/icons/line-4.png);"></div>
-                                            <p>Except obtain procure which ever undertake all ever laborious who chooses
-                                                to enjoy.</p>
-                                        </div>
-                                    </div>
-                                </div>
+           <section class="working-section centred"
+    style="background-image: url(assets/images/background/working-bg.jpg);">
+    <div class="large-container">
+        <div class="sec-title light">
+            <h6><i class="flaticon-roof"></i>How it’s Work</h6>
+            <h2>Standard <span>Working Process</span></h2>
+        </div>
+        <div class="inner-content">
+            <div class="row clearfix">
+                <div class="col-lg-3 col-md-6 col-sm-12 working-block"
+                    style="width: 350px; padding: 0 15px;">
+                    <div class="working-block-one"
+                        style="height: 450px; display: flex; flex-direction: column;">
+                        <div class="inner-box" style="display: flex; flex-direction: column; height: 100%;">
+                            <div class="icon-box">
+                                <span class="count-box">01</span>
+                                <div class="icon"
+                                    style="background-image: url(assets/images/resource/icon-bg.png);"><i
+                                        class="flaticon-consulting"></i></div>
                             </div>
-                            <div class="col-lg-3 col-md-6 col-sm-12 working-block"
-                                style="width: 350px; padding: 0 15px;">
-                                <div class="working-block-one"
-                                    style="height: 450px; display: flex; flex-direction: column;">
-                                    <div class="inner-box" style="display: flex; flex-direction: column; height: 100%;">
-                                        <div class="icon-box">
-                                            <span class="count-box">02</span>
-                                            <div class="icon"
-                                                style="background-image: url(assets/images/resource/icon-bg.png);"><i
-                                                    class="flaticon-paper"></i></div>
-                                        </div>
-                                        <div class="lower-content"
-                                            style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
-                                            <h3><a href="index.html">Detailed Proposal</a></h3>
-                                            <div class="pattern-layer"
-                                                style="background-image: url(assets/images/icons/line-4.png);"></div>
-                                            <p>Take trivial example which of ever undertakes some advantages physical
-                                                exercise.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-6 col-sm-12 working-block"
-                                style="width: 350px; padding: 0 15px;">
-                                <div class="working-block-one"
-                                    style="height: 450px; display: flex; flex-direction: column;">
-                                    <div class="inner-box" style="display: flex; flex-direction: column; height: 100%;">
-                                        <div class="icon-box">
-                                            <span class="count-box">03</span>
-                                            <div class="icon"
-                                                style="background-image: url(assets/images/resource/icon-bg.png);"><i
-                                                    class="flaticon-steel"></i></div>
-                                        </div>
-                                        <div class="lower-content"
-                                            style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
-                                            <h3><a href="index.html">Project Installation</a></h3>
-                                            <div class="pattern-layer"
-                                                style="background-image: url(assets/images/icons/line-4.png);"></div>
-                                            <p>Idea pleasure work praisings painy was born account the system obtain
-                                                some advantage.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-6 col-sm-12 working-block"
-                                style="width: 350px; padding: 0 15px;">
-                                <div class="working-block-one"
-                                    style="height: 450px; display: flex; flex-direction: column;">
-                                    <div class="inner-box" style="display: flex; flex-direction: column; height: 100%;">
-                                        <div class="icon-box">
-                                            <span class="count-box">04</span>
-                                            <div class="icon"
-                                                style="background-image: url(assets/images/resource/icon-bg.png);"><i
-                                                    class="flaticon-parcel"></i></div>
-                                        </div>
-                                        <div class="lower-content"
-                                            style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
-                                            <h3><a href="index.html">Final Inspection</a></h3>
-                                            <div class="pattern-layer"
-                                                style="background-image: url(assets/images/icons/line-4.png);"></div>
-                                            <p>Teachings the great explorer of the truth, the master-builder all human
-                                                happiness.</p>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="lower-content"
+                                style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+                                <h3><a href="#roofingForm">Consultation</a></h3>
+                                <div class="pattern-layer"
+                                    style="background-image: url(assets/images/icons/line-4.png);"></div>
+                                <p>Except obtain procure which ever undertake all ever laborious who chooses
+                                    to enjoy.</p>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
+                <div class="col-lg-3 col-md-6 col-sm-12 working-block"
+                    style="width: 350px; padding: 0 15px;">
+                    <div class="working-block-one"
+                        style="height: 450px; display: flex; flex-direction: column;">
+                        <div class="inner-box" style="display: flex; flex-direction: column; height: 100%;">
+                            <div class="icon-box">
+                                <span class="count-box">02</span>
+                                <div class="icon"
+                                    style="background-image: url(assets/images/resource/icon-bg.png);"><i
+                                        class="flaticon-paper"></i></div>
+                            </div>
+                            <div class="lower-content"
+                                style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+                                <h3><a href="#services">Detailed Proposal</a></h3>
+                                <div class="pattern-layer"
+                                    style="background-image: url(assets/images/icons/line-4.png);"></div>
+                                <p>Take trivial example which of ever undertakes some advantages physical
+                                    exercise.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 working-block"
+                    style="width: 350px; padding: 0 15px;">
+                    <div class="working-block-one"
+                        style="height: 450px; display: flex; flex-direction: column;">
+                        <div class="inner-box" style="display: flex; flex-direction: column; height: 100%;">
+                            <div class="icon-box">
+                                <span class="count-box">03</span>
+                                <div class="icon"
+                                    style="background-image: url(assets/images/resource/icon-bg.png);"><i
+                                        class="flaticon-steel"></i></div>
+                            </div>
+                            <div class="lower-content"
+                                style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+                                <h3><a href="#projects">Project Installation</a></h3>
+                                <div class="pattern-layer"
+                                    style="background-image: url(assets/images/icons/line-4.png);"></div>
+                                <p>Idea pleasure work praisings painy was born account the system obtain
+                                    some advantage.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 working-block"
+                    style="width: 350px; padding: 0 15px;">
+                    <div class="working-block-one"
+                        style="height: 450px; display: flex; flex-direction: column;">
+                        <div class="inner-box" style="display: flex; flex-direction: column; height: 100%;">
+                            <div class="icon-box">
+                                <span class="count-box">04</span>
+                                <div class="icon"
+                                    style="background-image: url(assets/images/resource/icon-bg.png);"><i
+                                        class="flaticon-parcel"></i></div>
+                            </div>
+                            <div class="lower-content"
+                                style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+                                <h3><a href="#testimonials">Final Inspection</a></h3>
+                                <div class="pattern-layer"
+                                    style="background-image: url(assets/images/icons/line-4.png);"></div>
+                                <p>Teachings the great explorer of the truth, the master-builder all human
+                                    happiness.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 
             <section class="testimonial-section bg-color-2" id="testimonials">
@@ -1985,285 +2021,266 @@
                     });
                 });
             </script>
-
-            <!-- main-footer -->
-            <footer class="main-footer style-one">
-                <div class="footer-top bg-color-1">
-                    <figure class="image-layer wow slideInLeft animated" data-wow-delay="00ms"
-                        data-wow-duration="1500ms">
-                        <img src="assets/images/resource/house-2.png" alt="">
-                    </figure>
-                    <div class="auto-container">
-                        <div class="widget-section">
-                            <div class="pattern-scale" style="background-image: url(assets/images/shape/shape-7.png);">
+<!-- main-footer -->
+<footer class="main-footer style-one">
+    <div class="footer-top bg-color-1">
+        <figure class="image-layer wow slideInLeft animated" data-wow-delay="00ms"
+            data-wow-duration="1500ms">
+            <img src="assets/images/resource/house-2.png" alt="">
+        </figure>
+        <div class="auto-container">
+            <div class="widget-section">
+                <div class="pattern-scale" style="background-image: url(assets/images/shape/shape-7.png);">
+                </div>
+                <div class="row clearfix">
+                    <!-- Logo and Description Column -->
+                    <div class="col-lg-4 col-md-6 col-sm-12 footer-column">
+                        <div class="footer-widget logo-widget">
+                            <div class="logo1">
+                                <img src="assets/images/logo.jpg" alt="Logo"
+                                    style="width: 300px; height: auto; margin-bottom: 20px; margin-top: 20px;" />
                             </div>
-                            <div class="row clearfix">
-                                <!-- Logo and Description Column -->
-                                <div class="col-lg-4 col-md-6 col-sm-12 footer-column">
-                                    <div class="footer-widget logo-widget">
-                                        <div class="logo1">
-                                            <img src="assets/images/logo.jpg" alt="Logo"
-                                                style="width: 200px; height: auto; margin-bottom: 20px; margin-top: 20px;" />
-                                        </div>
-                                        <div class="text"
-                                            style="color: #cccccc; font-size: 16px; line-height: 1.6; margin-bottom: 20px;">
-                                            <p>Steel Roof Structure is a family owned, operated business serving the
-                                                greater India area since 2015.</p>
-                                        </div>
-                                        <div class="pq-footer-item text-start"
-                                            style="display: flex; align-items: center;">
-                                            <i class="ti-email"
-                                                style="color: #ffffff; font-size: 20px; margin-right: 10px;"></i>
-                                            <div class="pq-footer-items-info" style="color: #ffffff;">
-                                                <h4 style="color: #ffffff; font-size: 16px; margin: 0;">Email Us</h4>
-                                                <a href="mailto:steelroofstructure@gmail.com"
-                                                    style="color: #cccccc; text-decoration: none;">
-                                                    <span style="color: #cccccc;">steelroofstructure@gmail.com</span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Useful Links Column -->
-                                <div class="col-lg-4 col-md-6 col-sm-12 footer-column">
-                                    <div class="footer-widget links-widget">
-                                        <div class="widget-title">
-                                            <div class="pattern-layer"
-                                                style="background-image: url(assets/images/shape/shape-8.png);"></div>
-                                            <h3 style="color: #ffffff; font-size: 20px; margin-bottom: 20px;">Useful
-                                                Links</h3>
-                                        </div>
-                                        <div class="widget-content clearfix"
-                                            style="display: flex; justify-content: space-between;">
-                                            <ul class="list clearfix" style="list-style: none; padding: 0; margin: 0;">
-                                                <li style="margin-bottom: 10px;"><a href="#home"
-                                                        style="color: #cccccc; text-decoration: none;">Home</a></li>
-                                                <li style="margin-bottom: 10px;"><a href="#about"
-                                                        style="color: #cccccc; text-decoration: none;">Our Company</a>
-                                                </li>
-                                                <li style="margin-bottom: 10px;"><a href="#services"
-                                                        style="color: #cccccc; text-decoration: none;">Services</a></li>
-                                                <li style="margin-bottom: 10px;"><a href="#projects"
-                                                        style="color: #cccccc; text-decoration: none;">Projects</a></li>
-                                            </ul>
-                                            <ul class="list clearfix" style="list-style: none; padding: 0; margin: 0;">
-                                                <li style="margin-bottom: 10px;"><a href="#testimonials"
-                                                        style="color: #cccccc; text-decoration: none;">Testimonials</a>
-                                                </li>
-                                                <li style="margin-bottom: 10px;"><a href="#partners"
-                                                        style="color: #cccccc; text-decoration: none;">Our Partners</a>
-                                                </li>
-                                                <li style="margin-bottom: 10px;"><a href="#roofingForm"
-                                                        style="color: #cccccc; text-decoration: none;">Contact</a></li>
-                                                <li style="margin-bottom: 10px;"><a href="#contact-map"
-                                                        style="color: #cccccc; text-decoration: none;">Sitemap</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Contact Info Column -->
-                                <div class="col-lg-4 col-md-6 col-sm-12 footer-column" style="margin-top:70px;">
-                                    <div class="footer-widget contact-widget">
-                                        <div class="widget-title">
-                                            <div class="pattern-layer"
-                                                style="background-image: url(assets/images/shape/shape-8.png);"></div>
-                                            <h3 style="color: #ffffff; font-size: 20px; margin-bottom: 20px;">Contact
-                                                Info</h3>
-                                        </div>
-                                        <div class="widget-content"
-                                            style="color: #cccccc; font-size: 16px; line-height: 1.6;">
-                                            <p style="margin-bottom: 10px;">
-                                                <strong style="color: #ffffff;">Address: B.O.: MF Plaza #325, 32 'E'
-                                                    Cross, 4th 'T' Block, Jayanagar, Bangalore - 580041.</strong>
-                                            </p>
-                                            <p style="margin-bottom: 10px;">
-                                                <strong style="color: #ffffff;">Phone:
-                                                    <a href="tel:+91 8147659246"
-                                                        style="color: #cccccc; text-decoration: none;">+91
-                                                        8147659246</a></strong>
-                                            </p>
-                                            <p style="margin-bottom: 10px;">
-                                                <strong style="color: #ffffff;">Email:
-                                                    <a href="mailto:steelroofstructure@gmail.com"
-                                                        style="color: #cccccc; text-decoration: none;">steelroofstructure@gmail.com</a></strong>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="text"
+                                style="color: #cccccc; font-size: 16px; line-height: 1.6; margin-bottom: 20px;">
+                                <p>Steel Roof Structure is a family owned, operated business serving the
+                                    greater India area since 2015.</p>
+                            </div>
+                           
+                        </div>
+                    </div>
+                    <!-- Useful Links Column -->
+                    <div class="col-lg-4 col-md-6 col-sm-12 footer-column">
+                        <div class="footer-widget links-widget">
+                            <div class="widget-title">
+                                <div class="pattern-layer"
+                                    style="background-image: url(assets/images/shape/shape-8.png);"></div>
+                                <h3 style="color: #ffffff; font-size: 20px; margin-bottom: 20px;">Useful
+                                    Links</h3>
+                            </div>
+                            <div class="widget-content clearfix"
+                                style="display: flex; justify-content: space-between;">
+                                <ul class="list clearfix" style="list-style: none; padding: 0; margin: 0;">
+                                    <li style="margin-bottom: 10px;"><a href="#home"
+                                            style="color: #cccccc; text-decoration: none;">Home</a></li>
+                                    <li style="margin-bottom: 10px;"><a href="#about"
+                                            style="color: #cccccc; text-decoration: none;">Our Company</a>
+                                    </li>
+                                    <li style="margin-bottom: 10px;"><a href="#services"
+                                            style="color: #cccccc; text-decoration: none;">Services</a></li>
+                                    <li style="margin-bottom: 10px;"><a href="#projects"
+                                            style="color: #cccccc; text-decoration: none;">Projects</a></li>
+                                </ul>
+                                <ul class="list clearfix" style="list-style: none; padding: 0; margin: 0;">
+                                    <li style="margin-bottom: 10px;"><a href="#testimonials"
+                                            style="color: #cccccc; text-decoration: none;">Testimonials</a>
+                                    </li>
+                                    <li style="margin-bottom: 10px;"><a href="#partners"
+                                            style="color: #cccccc; text-decoration: none;">Our Partners</a>
+                                    </li>
+                                    <li style="margin-bottom: 10px;"><a href="#roofingForm"
+                                            style="color: #cccccc; text-decoration: none;">Contact</a></li>
+                                    <li style="margin-bottom: 10px;"><a href="#contact-map"
+                                            style="color: #cccccc; text-decoration: none;">Sitemap</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Contact Info Column -->
+                    <div class="col-lg-4 col-md-6 col-sm-12 footer-column" style="margin-top:70px;">
+                        <div class="footer-widget contact-widget">
+                            <div class="widget-title">
+                                <div class="pattern-layer"
+                                    style="background-image: url(assets/images/shape/shape-8.png);"></div>
+                                <h3 style="color: #ffffff; font-size: 20px; margin-bottom: 20px;">Contact
+                                    Info</h3>
+                            </div>
+                            <div class="widget-content"
+                                style="color: #cccccc; font-size: 16px; line-height: 1.6;">
+                                <p style="margin-bottom: 10px;">
+                                    <strong style="color: #ffffff;">Address: B.O.: MF Plaza #325, 32 'E'
+                                        Cross, 4th 'T' Block, Jayanagar, Bangalore - 580041.</strong>
+                                </p>
+                                <p style="margin-bottom: 10px;">
+                                    <strong style="color: #ffffff;">Phone:
+                                        <a href="tel:+91 8147659246"
+                                            style="color: #cccccc; text-decoration: none;">+91
+                                            8147659246</a></strong>
+                                </p>
+                                <p style="margin-bottom: 10px;">
+                                    <strong style="color: #ffffff;">Email:
+                                        <a href="mailto:steelroofstructure@gmail.com"
+                                            style="color: #cccccc; text-decoration: none;">steelroofstructure@gmail.com</a></strong>
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
-               <div class="footer-bottom">
-    <div class="auto-container" style="width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 15px;">
-        <div class="inner-box" style="display: flex; justify-content: space-between; align-items: center; padding: 20px 0;">
-            <div class="copyright" style="margin: 0;">
-                <p style="margin: 0;">Copyright © 2025 All Rights Reserved by <a href="index.html" style="color: inherit; text-decoration: none;">Steel Roof Structure</a>.</p>
             </div>
-            <ul class="social-links" style="display: flex; gap: 15px; list-style: none; padding: 0; margin: 0;">
-                <li>
-                    <a href="https://www.facebook.com/profile.php?id=61576275068210" 
-                       style="display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; background: #1877F2; color: #fff; border-radius: 50%; text-decoration: none; transition: all 0.3s ease;">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://x.com/roof_steel" 
-                       style="display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; background: #1DA1F2; color: #fff; border-radius: 50%; text-decoration: none; transition: all 0.3s ease;">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.youtube.com/channel/UCsHPXNz0xBaDkcrlqG6HFhA/community?show_create_dialog=1" 
-                       style="display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; background: #FF0000; color: #fff; border-radius: 50%; text-decoration: none; transition: all 0.3s ease;">
-                        <i class="fab fa-youtube"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.instagram.com/steelroofstructure/" 
-                       style="display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); color: #fff; border-radius: 50%; text-decoration: none; transition: all 0.3s ease;">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                </li>
-            </ul>
         </div>
     </div>
-</div>
-            </footer>
-            <!-- Include Font Awesome for icons -->
-            <link rel="stylesheet"
-                href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
-            <style>
-                /* WhatsApp button */
-                .whatsapp-button {
-                    position: fixed;
-                    bottom: 20px;
-                    right: 20px;
-                    background-color: #25D366;
-                    color: white;
-                    border: none;
-                    border-radius: 50px;
-                    padding: 12px 20px;
-                    font-size: 16px;
-                    display: flex;
-                    align-items: center;
-                    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-                    cursor: pointer;
-                    z-index: 999;
-                }
-
-                .whatsapp-button img {
-                    width: 24px;
-                    height: 24px;
-                    margin-right: 8px;
-                }
-
-                /* Chat popup */
-                .whatsapp-popup {
-                    position: fixed;
-                    bottom: 80px;
-                    right: 20px;
-                    background-color: #fff;
-                    border: 1px solid #ccc;
-                    border-radius: 12px;
-                    width: 280px;
-                    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-                    display: none;
-                    flex-direction: column;
-                    z-index: 998;
-                }
-
-                .whatsapp-popup header {
-                    background-color: #25D366;
-                    color: white;
-                    padding: 12px;
-                    font-weight: bold;
-                    border-top-left-radius: 12px;
-                    border-top-right-radius: 12px;
-                }
-
-                .whatsapp-popup .content {
-                    padding: 10px;
-                    font-size: 14px;
-                    color: #333;
-                }
-
-                .whatsapp-popup .open-chat {
-                    margin: 10px;
-                    background-color: #25D366;
-                    color: white;
-                    border: none;
-                    border-radius: 6px;
-                    padding: 8px;
-                    cursor: pointer;
-                    text-align: center;
-                    text-decoration: none;
-                    display: block;
-                }
-            </style>
-
-
-            <!-- WhatsApp Button -->
-            <button class="whatsapp-button" onclick="togglePopup()">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
-                Chat with us
-            </button>
-
-            <!-- Popup Box -->
-            <div class="whatsapp-popup" id="whatsappPopup">
-                <header>WhatsApp Chat</header>
-                <div class="content">
-                    Hi there! 👋<br />
-                    Need help? Chat with us on WhatsApp.
+    <div class="footer-bottom">
+        <div class="auto-container" style="width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 15px;">
+            <div class="inner-box" style="display: flex; justify-content: space-between; align-items: center; padding: 20px 0;">
+                <div class="copyright" style="margin: 0;">
+                    <p style="margin: 0;">Copyright © 2025 All Rights Reserved by <a href="index.html" style="color: inherit; text-decoration: none;">Steel Roof Structure</a>.</p>
                 </div>
-                <a href="https://wa.me/8147659246" target="_blank" class="open-chat">Start Chat</a>
+                <ul class="social-links" style="display: flex; gap: 15px; list-style: none; padding: 0; margin: 0;">
+                    <li>
+                        <a href="https://www.facebook.com/profile.php?id=61576275068210" target="_blank"
+                           style="display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; background: #1877F2; color: #fff; border-radius: 50%; text-decoration: none; transition: all 0.3s ease;">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </li>
+                      <li>
+                                <a href="https://x.com/roof_steel" target="_blank"
+                                   style="display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; background: #000000; color: #fff; border-radius: 50%; text-decoration: none; transition: all 0.3s ease;">
+                                    <span style="font-size: 16px; font-weight: bold;">X</span>
+                                </a>
+                            </li>
+                    <li>
+                        <a href="https://www.youtube.com/channel/UCsHPXNz0xBaDkcrlqG6HFhA/community?show_create_dialog=1" target="_blank"
+                           style="display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; background: #FF0000; color: #fff; border-radius: 50%; text-decoration: none; transition: all 0.3s ease;">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/steelroofstructure/" target="_blank"
+                           style="display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); color: #fff; border-radius: 50%; text-decoration: none; transition: all 0.3s ease;">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </li>
+                </ul>
             </div>
-
-            <!-- Script to toggle popup -->
-            <script>
-                function togglePopup() {
-                    const popup = document.getElementById('whatsappPopup');
-                    popup.style.display = popup.style.display === 'flex' ? 'none' : 'flex';
-                }
-            </script>
-
-
-
-            <!--Scroll to top-->
-            <button class="scroll-top scroll-to-target" data-target="html">
-                <span class="flaticon-up-arrow"></span>
-            </button>
-
+        </div>
     </div>
+</footer>
+<!-- Include Font Awesome for icons -->
+<link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
+<style>
+    /* WhatsApp button */
+    .whatsapp-button {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #25D366;
+        color: white;
+        border: none;
+        border-radius: 50px;
+        padding: 12px 20px;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+        z-index: 999;
+    }
 
-    <!-- jequery plugins -->
-    <script src="assets/js/jquery.js"></script>
-    <script src="assets/js/popper.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/owl.js"></script>
-    <script src="assets/js/wow.js"></script>
-    <script src="assets/js/validation.js"></script>
-    <script src="assets/js/jquery.fancybox.js"></script>
-    <script src="assets/js/TweenMax.min.js"></script>
-    <script src="assets/js/appear.js"></script>
-    <script src="assets/js/scrollbar.js"></script>
-    <script src="assets/js/nav-tool.js"></script>
-    <script src="assets/js/jquery-ui.js"></script>
-    <script src="assets/js/timePicker.js"></script>
-    <script src="assets/js/jquery.nice-select.min.js"></script>
+    .whatsapp-button img {
+        width: 24px;
+        height: 24px;
+        margin-right: 8px;
+    }
 
-    <!-- map script -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-CE0deH3Jhj6GN4YvdCFZS7DpbXexzGU"></script>
-    <script src="assets/js/gmaps.js"></script>
-    <script src="assets/js/map-helper.js"></script>
+    /* Chat popup */
+    .whatsapp-popup {
+        position: fixed;
+        bottom: 80px;
+        right: 20px;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 12px;
+        width: 280px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        display: none;
+        flex-direction: column;
+        z-index: 998;
+    }
 
-    <!-- main-js -->
-    <script src="assets/js/script.js"></script>
+    .whatsapp-popup header {
+        background-color: #25D366;
+        color: white;
+        padding: 12px;
+        font-weight: bold;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+    }
+
+    .whatsapp-popup .content {
+        padding: 10px;
+        font-size: 14px;
+        color: #333;
+    }
+
+    .whatsapp-popup .open-chat {
+        margin: 10px;
+        background-color: #25D366;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        padding: 8px;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        display: block;
+    }
+</style>
+
+<!-- WhatsApp Button -->
+<button class="whatsapp-button" onclick="togglePopup()">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+    Chat with us
+</button>
+
+<!-- Popup Box -->
+<div class="whatsapp-popup" id="whatsappPopup">
+    <header>WhatsApp Chat</header>
+    <div class="content">
+        Hi there! 👋<br />
+        Need help? Chat with us on WhatsApp.
+    </div>
+    <a href="https://wa.me/8147659246" target="_blank" class="open-chat">Start Chat</a>
+</div>
+
+<!-- Script to toggle popup -->
+<script>
+    function togglePopup() {
+        const popup = document.getElementById('whatsappPopup');
+        popup.style.display = popup.style.display === 'flex' ? 'none' : 'flex';
+    }
+</script>
+
+<!--Scroll to top-->
+<button class="scroll-top scroll-to-target" data-target="html">
+    <span class="flaticon-up-arrow"></span>
+</button>
+
+</div>
+
+<!-- jequery plugins -->
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/owl.js"></script>
+<script src="assets/js/wow.js"></script>
+<script src="assets/js/validation.js"></script>
+<script src="assets/js/jquery.fancybox.js"></script>
+<script src="assets/js/TweenMax.min.js"></script>
+<script src="assets/js/appear.js"></script>
+<script src="assets/js/scrollbar.js"></script>
+<script src="assets/js/nav-tool.js"></script>
+<script src="assets/js/jquery-ui.js"></script>
+<script src="assets/js/timePicker.js"></script>
+<script src="assets/js/jquery.nice-select.min.js"></script>
+
+<!-- map script -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-CE0deH3Jhj6GN4YvdCFZS7DpbXexzGU"></script>
+<script src="assets/js/gmaps.js"></script>
+<script src="assets/js/map-helper.js"></script>
+
+<!-- main-js -->
+<script src="assets/js/script.js"></script>
 
 </body><!-- End of .page_wrapper -->
-
-
-
 </html>
